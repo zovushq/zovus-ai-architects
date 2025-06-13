@@ -1,12 +1,9 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Mail, MessageSquare, Calendar } from 'lucide-react';
-
 const Contact = () => {
-  return (
-    <section id="contact" className="py-20 bg-gray-900 text-white">
+  return <section id="contact" className="py-20 text-white bg-sky-50">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold mb-6">
@@ -64,8 +61,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
