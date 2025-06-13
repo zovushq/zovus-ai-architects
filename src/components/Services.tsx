@@ -7,22 +7,22 @@ import { Bot, Users, Lightbulb, ExternalLink } from 'lucide-react';
 const Services = () => {
   const services = [
     {
-      icon: <Users className="w-8 h-8 text-blue-600" />,
-      title: "Bytesprout",
+      icon: <Users className="w-8 h-8 text-red-600" />,
+      title: "ByteSprout",
       subtitle: "Build Authority, Generate Leads",
-      description: "Help businesses grow online using AI Avatars to create educational content that builds authority and converts leads. Perfect for attorneys, doctors, and professionals.",
+      description: "Help businesses grow online using AI Avatars to create educational content that builds authority and generates leads.",
       features: [
         "AI Avatar content creation",
         "Authority building strategy",
         "Automated lead conversion",
         "Social media presence"
       ],
-      cta: "Visit Bytesprout",
+      cta: "Visit ByteSprout",
       link: "https://bytesprout.zovus.tech",
       isExternal: true
     },
     {
-      icon: <Bot className="w-8 h-8 text-blue-600" />,
+      icon: <Bot className="w-8 h-8 text-red-600" />,
       title: "AI Agent Development",
       subtitle: "Automate Boring Tasks",
       description: "Reduce resource costs by 1/10th or more with custom AI agents that handle repetitive work, letting your team focus on high-ROI activities.",
@@ -36,7 +36,7 @@ const Services = () => {
       link: "#contact"
     },
     {
-      icon: <Lightbulb className="w-8 h-8 text-blue-600" />,
+      icon: <Lightbulb className="w-8 h-8 text-red-600" />,
       title: "AI Consultation",
       subtitle: "Scale Smart, Do More With Less",
       description: "Strategic guidance on leveraging AI to scale your business efficiently. We help you identify opportunities and create actionable implementation plans.",
@@ -52,48 +52,48 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-black mb-4">
             Our Services
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-800 max-w-3xl mx-auto">
             Three ways we help businesses leverage AI for real growth and efficiency
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card key={index} className="border border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
               <CardContent className="p-8">
                 <div className="mb-6">
                   {service.icon}
                 </div>
                 
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                <h3 className="text-2xl font-bold text-black mb-2">
                   {service.title}
                 </h3>
                 
-                <p className="text-blue-600 font-medium mb-4">
+                <p className="text-red-600 font-medium mb-4">
                   {service.subtitle}
                 </p>
                 
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-800 mb-6 leading-relaxed">
                   {service.description}
                 </p>
                 
                 <ul className="space-y-2 mb-8">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-gray-600">
-                      <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
+                    <li key={idx} className="flex items-center text-gray-800">
+                      <div className="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
                       {feature}
                     </li>
                   ))}
                 </ul>
                 
                 <Button 
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                  className="w-full bg-red-600 hover:bg-red-700 text-white"
                   onClick={() => {
                     if (service.isExternal) {
                       window.open(service.link, '_blank');
