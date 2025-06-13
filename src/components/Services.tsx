@@ -1,0 +1,117 @@
+
+import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Bot, Users, Lightbulb, ExternalLink } from 'lucide-react';
+
+const Services = () => {
+  const services = [
+    {
+      icon: <Users className="w-8 h-8 text-blue-600" />,
+      title: "Bytesprout",
+      subtitle: "Build Authority, Generate Leads",
+      description: "Help businesses grow online using AI Avatars to create educational content that builds authority and converts leads. Perfect for attorneys, doctors, and professionals.",
+      features: [
+        "AI Avatar content creation",
+        "Authority building strategy",
+        "Automated lead conversion",
+        "Social media presence"
+      ],
+      cta: "Visit Bytesprout",
+      link: "https://bytesprout.zovus.tech",
+      isExternal: true
+    },
+    {
+      icon: <Bot className="w-8 h-8 text-blue-600" />,
+      title: "AI Agent Development",
+      subtitle: "Automate Boring Tasks",
+      description: "Reduce resource costs by 1/10th or more with custom AI agents that handle repetitive work, letting your team focus on high-ROI activities.",
+      features: [
+        "Custom AI agent development",
+        "Process automation",
+        "Cost reduction strategies",
+        "Seamless integration"
+      ],
+      cta: "Build AI Agents",
+      link: "#contact"
+    },
+    {
+      icon: <Lightbulb className="w-8 h-8 text-blue-600" />,
+      title: "AI Consultation",
+      subtitle: "Scale Smart, Do More With Less",
+      description: "Strategic guidance on leveraging AI to scale your business efficiently. We help you identify opportunities and create actionable implementation plans.",
+      features: [
+        "AI strategy development",
+        "Opportunity assessment",
+        "Implementation roadmap",
+        "ROI optimization"
+      ],
+      cta: "Get Strategy Session",
+      link: "#contact"
+    }
+  ];
+
+  return (
+    <section id="services" className="py-20 bg-white">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Our Services
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Three ways we help businesses leverage AI for real growth and efficiency
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <Card key={index} className="border-0 shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <CardContent className="p-8">
+                <div className="mb-6">
+                  {service.icon}
+                </div>
+                
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  {service.title}
+                </h3>
+                
+                <p className="text-blue-600 font-medium mb-4">
+                  {service.subtitle}
+                </p>
+                
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+                
+                <ul className="space-y-2 mb-8">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-center text-gray-600">
+                      <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                
+                <Button 
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white"
+                  onClick={() => {
+                    if (service.isExternal) {
+                      window.open(service.link, '_blank');
+                    } else {
+                      document.querySelector(service.link)?.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  {service.cta}
+                  {service.isExternal && <ExternalLink className="w-4 h-4 ml-2" />}
+                </Button>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;
