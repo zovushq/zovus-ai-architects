@@ -1,20 +1,15 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Mail, Phone, MapPin, Clock, Calendar } from 'lucide-react';
-
 const Contact = () => {
   const handleEmailClick = () => {
     window.location.href = 'mailto:zovus.inc@gmail.com';
   };
-
   const handleBookCallClick = () => {
     window.open('https://calendly.com/zovus', '_blank');
   };
-
-  return (
-    <section id="contact" className="py-20 bg-white">
+  return <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-black mb-4">
@@ -37,10 +32,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-black">Email</h4>
-                      <a 
-                        href="mailto:zovus.inc@gmail.com" 
-                        className="text-gray-800 hover:underline transition-all duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gray-800 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
-                      >
+                      <a href="mailto:zovus.inc@gmail.com" className="text-gray-800 hover:underline transition-all duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gray-800 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">
                         zovus.inc@gmail.com
                       </a>
                     </div>
@@ -87,20 +79,11 @@ const Contact = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <Button 
-                size="lg" 
-                className="flex-1 bg-[#5433FF] hover:bg-[#4328CC] text-white"
-                onClick={handleBookCallClick}
-              >
+              <Button size="lg" onClick={handleBookCallClick} className="flex-1 bg-[#5433FF] hover:bg-[#4328CC] text-white px-0 py-[10px]">
                 Book a Call
                 <Calendar className="w-5 h-5 ml-2" />
               </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="flex-1 border-[#5433FF] text-[#5433FF] hover:bg-[#5433FF] hover:text-white"
-                onClick={handleEmailClick}
-              >
+              <Button size="lg" variant="outline" className="flex-1 border-[#5433FF] text-[#5433FF] hover:bg-[#5433FF] hover:text-white" onClick={handleEmailClick}>
                 Send Email
                 <Mail className="w-5 h-5 ml-2" />
               </Button>
@@ -108,8 +91,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
