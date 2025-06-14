@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
@@ -8,6 +9,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { ChevronDown, Menu, X } from 'lucide-react';
+import NavLinks from './NavLinks';
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -91,12 +93,6 @@ const Header = () => {
     }, 100);
   };
 
-  const getNavLinkClasses = (isActive: boolean) => {
-    return `transition-colors relative group font-medium
-      ${isActive ? 'text-[#5433FF]' : 'text-black'}
-    `;
-  };
-
   const getServiceLinkClasses = (isActive: boolean) => {
     return `transition-colors ${
       isActive 
@@ -163,21 +159,10 @@ const Header = () => {
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
-              
-              <button 
-                onClick={() => handleSmoothScroll('#about')} 
-                className={getNavLinkClasses(location.pathname === '/')}
-              >
-                About
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#5433FF] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
-              </button>
-              <button 
-                onClick={() => handleSmoothScroll('#contact')} 
-                className={getNavLinkClasses(location.pathname === '/')}
-              >
-                Contact
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#5433FF] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
-              </button>
+
+              {/* Inserted refactored About and Contact */}
+              <NavLinks handleSmoothScroll={handleSmoothScroll} />
+
             </nav>
 
             <div className="flex items-center space-x-4">
@@ -233,6 +218,7 @@ const Header = () => {
                     </button>
                   </div>
                 </div>
+                {/* Mobile About/Contact */}
                 <button 
                   onClick={() => handleSmoothScroll('#about')} 
                   className="text-black hover:text-[#5433FF] transition-colors text-left"
@@ -263,3 +249,4 @@ const Header = () => {
 };
 
 export default Header;
+
