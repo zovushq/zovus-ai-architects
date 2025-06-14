@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
@@ -93,11 +92,9 @@ const Header = () => {
   };
 
   const getNavLinkClasses = (isActive: boolean) => {
-    return `transition-colors relative group ${
-      isActive 
-        ? 'text-[#5433FF]' 
-        : 'text-black hover:text-black'
-    }`;
+    return `transition-colors relative group font-medium
+      ${isActive ? 'text-[#5433FF]' : 'text-black'}
+    `;
   };
 
   const getServiceLinkClasses = (isActive: boolean) => {
@@ -172,14 +169,14 @@ const Header = () => {
                 className={getNavLinkClasses(location.pathname === '/')}
               >
                 About
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#5433FF] transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#5433FF] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
               </button>
               <button 
                 onClick={() => handleSmoothScroll('#contact')} 
                 className={getNavLinkClasses(location.pathname === '/')}
               >
                 Contact
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#5433FF] transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#5433FF] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
               </button>
             </nav>
 
