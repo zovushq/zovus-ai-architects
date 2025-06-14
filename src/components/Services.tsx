@@ -25,7 +25,8 @@ const Services = () => {
       icon: <Users className="w-8 h-8 text-[#5433FF]" />,
       title: "ByteSprout",
       subtitle: "Build Authority, Generate Leads",
-      description: "Help businesses grow online using AI Avatars to create educational content that builds authority and generates leads.",
+      description:
+        "Help law firms grow online using AI Avatars to create educational content that builds authority and generates leads.",
       features: [
         "AI Avatar content creation",
         "Authority building strategy",
