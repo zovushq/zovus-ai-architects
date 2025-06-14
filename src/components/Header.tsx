@@ -2,10 +2,18 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { 
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import { ChevronDown, Menu, X } from 'lucide-react';
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -30,6 +38,7 @@ const Header = () => {
   }, [lastScrollY]);
 
   const handleSmoothScroll = (elementId: string) => {
+    setIsMobileMenuOpen(false);
     // Check if we're on the home page
     if (window.location.pathname === '/') {
       const element = document.querySelector(elementId);
@@ -48,7 +57,20 @@ const Header = () => {
     }
   };
 
+  const handleLogoClick = () => {
+    setIsMobileMenuOpen(false);
+    if (window.location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
+    }
+  };
+
   const handleGetStartedClick = () => {
+    setIsMobileMenuOpen(false);
     if (window.location.pathname === '/') {
       handleSmoothScroll('#contact');
     } else {
@@ -62,6 +84,22 @@ const Header = () => {
     }
   };
 
+  const handleServiceNavigation = (path: string) => {
+    setIsMobileMenuOpen(false);
+    navigate(path);
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
+  const getLinkClasses = (isActive: boolean) => {
+    return `transition-colors relative group ${
+      isActive 
+        ? 'text-[#5433FF]' 
+        : 'text-black hover:text-black'
+    }`;
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ease-in-out ${
@@ -72,50 +110,136 @@ const Header = () => {
         <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
-              <Link to="/">
+              <button onClick={handleLogoClick} className="cursor-pointer">
                 <img 
-                  src="/lovable-uploads/5fd19fa8-b0ed-4b31-9b5e-2a1a61f790c3.png" 
-                  alt="ZOVUS Logo" 
-                  className="h-8 w-auto cursor-pointer"
+                  src="/lovable-uploads/371fcea4-706d-45e4-b873-535edc2d0eaa.png" 
+                  alt="ZOVUS company logo – AI-powered business scaling solutions" 
+                  className="h-8 w-auto"
                 />
-              </Link>
-            </div>
-            <nav className="hidden md:flex items-center space-x-8">
-              <button 
-                onClick={() => handleSmoothScroll('#services')} 
-                className={`transition-colors relative group ${
-                  location.pathname === '/' ? 'text-[#5433FF]' : 'text-black hover:text-white/80'
-                }`}
-              >
-                Services
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#5433FF] transition-all duration-300 group-hover:w-full"></span>
               </button>
+            </div>
+            
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center space-x-8">
+              <DropdownMenu>
+                <DropdownMenuTrigger className={`${getLinkClasses(false)} flex items-center space-x-1`}>
+                  <span>Our Services</span>
+                  <ChevronDown className="w-4 h-4" />
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#5433FF] transition-all duration-300 group-hover:w-full"></span>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="bg-white border border-gray-200 shadow-lg rounded-md p-2 min-w-[200px] z-50">
+                  <DropdownMenuItem asChild>
+                    <a 
+                      href="https://bytesprout.zovus.tech" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="cursor-pointer px-3 py-2 text-black hover:text-[#5433FF] hover:bg-gray-50 rounded transition-colors w-full"
+                    >
+                      ByteSprout
+                    </a>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <button 
+                      onClick={() => handleServiceNavigation('/ai-agent-development')}
+                      className="cursor-pointer px-3 py-2 text-black hover:text-[#5433FF] hover:bg-gray-50 rounded transition-colors w-full text-left"
+                    >
+                      AI Agent Development
+                    </button>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <button 
+                      onClick={() => handleServiceNavigation('/ai-consultation')}
+                      className="cursor-pointer px-3 py-2 text-black hover:text-[#5433FF] hover:bg-gray-50 rounded transition-colors w-full text-left"
+                    >
+                      AI Consultation
+                    </button>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              
               <button 
                 onClick={() => handleSmoothScroll('#about')} 
-                className={`transition-colors relative group ${
-                  location.pathname === '/' ? 'text-[#5433FF]' : 'text-black hover:text-white/80'
-                }`}
+                className={getLinkClasses(location.pathname === '/')}
               >
                 About
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#5433FF] transition-all duration-300 group-hover:w-full"></span>
               </button>
               <button 
                 onClick={() => handleSmoothScroll('#contact')} 
-                className={`transition-colors relative group ${
-                  location.pathname === '/' ? 'text-[#5433FF]' : 'text-black hover:text-white/80'
-                }`}
+                className={getLinkClasses(location.pathname === '/')}
               >
                 Contact
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#5433FF] transition-all duration-300 group-hover:w-full"></span>
               </button>
             </nav>
-            <Button 
-              className="bg-[#5433FF] hover:bg-[#4328CC] text-white"
-              onClick={handleGetStartedClick}
-            >
-              Get Started
-            </Button>
+
+            <div className="flex items-center space-x-4">
+              <Button 
+                className="bg-[#5433FF] hover:bg-[#4328CC] text-white"
+                onClick={handleGetStartedClick}
+              >
+                Get Started
+              </Button>
+              
+              {/* Mobile Menu Button */}
+              <button 
+                className="md:hidden p-2"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              >
+                {isMobileMenuOpen ? (
+                  <X className="w-6 h-6 text-black" />
+                ) : (
+                  <Menu className="w-6 h-6 text-black" />
+                )}
+              </button>
+            </div>
           </div>
+
+          {/* Mobile Navigation Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden mt-4 pb-4 border-t border-gray-200">
+              <nav className="flex flex-col space-y-4 pt-4">
+                <div className="flex flex-col space-y-2">
+                  <span className="text-black font-medium">Our Services</span>
+                  <div className="pl-4 flex flex-col space-y-2">
+                    <a 
+                      href="https://bytesprout.zovus.tech" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-black hover:text-[#5433FF] transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      ByteSprout
+                    </a>
+                    <button 
+                      onClick={() => handleServiceNavigation('/ai-agent-development')}
+                      className="text-black hover:text-[#5433FF] transition-colors text-left"
+                    >
+                      AI Agent Development
+                    </button>
+                    <button 
+                      onClick={() => handleServiceNavigation('/ai-consultation')}
+                      className="text-black hover:text-[#5433FF] transition-colors text-left"
+                    >
+                      AI Consultation
+                    </button>
+                  </div>
+                </div>
+                <button 
+                  onClick={() => handleSmoothScroll('#about')} 
+                  className="text-black hover:text-[#5433FF] transition-colors text-left"
+                >
+                  About
+                </button>
+                <button 
+                  onClick={() => handleSmoothScroll('#contact')} 
+                  className="text-black hover:text-[#5433FF] transition-colors text-left"
+                >
+                  Contact
+                </button>
+              </nav>
+            </div>
+          )}
         </div>
       </div>
     </header>

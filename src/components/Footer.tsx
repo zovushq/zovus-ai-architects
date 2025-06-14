@@ -32,6 +32,17 @@ const Footer = () => {
     }, 100);
   };
 
+  const handleLogoClick = () => {
+    if (window.location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
+    }
+  };
+
   const XIcon = () => (
     <svg
       viewBox="0 0 24 24"
@@ -48,13 +59,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-4">
-              <Link to="/">
+              <button onClick={handleLogoClick} className="cursor-pointer">
                 <img 
-                  src="/lovable-uploads/d0aecac6-a435-4cfd-84b5-69d4c7d47696.png" 
-                  alt="ZOVUS Logo" 
-                  className="h-10 w-auto cursor-pointer"
+                  src="/lovable-uploads/c1e50f00-59fa-4db7-ae4b-cada6a80ddd1.png" 
+                  alt="ZOVUS company logo – AI-powered business scaling solutions" 
+                  className="h-10 w-auto"
                 />
-              </Link>
+              </button>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
               AI that drives results. Scale your business profitably with automation, 
@@ -100,11 +111,20 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="https://bytesprout.zovus.tech" target="_blank" rel="noopener noreferrer" className="hover:text-[#5433FF] transition-colors">ByteSprout</a></li>
+              <li>
+                <a 
+                  href="https://bytesprout.zovus.tech" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-white hover:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors"
+                >
+                  ByteSprout
+                </a>
+              </li>
               <li>
                 <button 
                   onClick={() => handleServiceNavigation('/ai-agent-development')} 
-                  className="hover:text-[#5433FF] transition-colors text-left"
+                  className="text-white hover:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left"
                 >
                   AI Agent Development
                 </button>
@@ -112,7 +132,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleServiceNavigation('/ai-consultation')} 
-                  className="hover:text-[#5433FF] transition-colors text-left"
+                  className="text-white hover:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left"
                 >
                   AI Consultation
                 </button>
@@ -126,7 +146,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleSmoothScroll('#about')} 
-                  className="hover:text-[#5433FF] transition-colors text-left"
+                  className="text-white hover:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left"
                 >
                   About
                 </button>
@@ -134,7 +154,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleSmoothScroll('#contact')} 
-                  className="hover:text-[#5433FF] transition-colors text-left"
+                  className="text-white hover:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left"
                 >
                   Contact
                 </button>
@@ -142,7 +162,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleSmoothScroll('#services')} 
-                  className="hover:text-[#5433FF] transition-colors text-left"
+                  className="text-white hover:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left"
                 >
                   Services
                 </button>

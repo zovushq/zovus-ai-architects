@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Lightbulb, Target, TrendingUp, Users, CheckCircle, Star } from 'lucide-react';
 
 const AiConsultation = () => {
+  useEffect(() => {
+    document.title = 'AI Strategy Consulting | Unlock Growth with ZOVUS';
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Get expert guidance to identify high-impact AI opportunities for your business. ZOVUS delivers strategic AI consulting with clear, actionable implementation plans.');
+    }
+  }, []);
+
   const handleContactClick = () => {
     window.location.href = 'mailto:zovus.inc@gmail.com';
   };
@@ -197,13 +205,22 @@ const AiConsultation = () => {
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Let's create a strategic AI roadmap that transforms your business operations and drives measurable growth.
           </p>
-          <Button 
-            size="lg" 
-            className="bg-white text-[#5433FF] hover:bg-gray-100 px-8 py-4 text-lg"
-            onClick={handleContactClick}
-          >
-            Book Your Strategy Session
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button 
+              size="lg" 
+              className="bg-white text-[#5433FF] hover:bg-gray-100 px-8 py-4 text-lg"
+              onClick={handleContactClick}
+            >
+              Email Us
+            </Button>
+            <Button 
+              size="lg" 
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#5433FF] px-8 py-4 text-lg"
+              onClick={() => window.open('https://cal.com/zovus/bytesprout', '_blank')}
+            >
+              Book a Meeting
+            </Button>
+          </div>
         </div>
       </section>
 
