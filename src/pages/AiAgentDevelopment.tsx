@@ -1,8 +1,9 @@
+
 import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { Bot, Zap, Target, Clock, DollarSign, TrendingUp, CheckCircle } from 'lucide-react';
+import { Bot, Target, Clock, DollarSign, TrendingUp, CheckCircle } from 'lucide-react';
 
 const AiAgentDevelopment = () => {
   useEffect(() => {
@@ -46,7 +47,6 @@ const AiAgentDevelopment = () => {
               onClick={handleContactClick}
             >
               Start Building AI Agents
-              <Zap className="w-5 h-5 ml-2" />
             </Button>
           </div>
         </div>
@@ -184,3 +184,4 @@ const AiAgentDevelopment = () => {
 };
 
 export default AiAgentDevelopment;
+
