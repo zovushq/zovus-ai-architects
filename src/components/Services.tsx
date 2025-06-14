@@ -3,11 +3,14 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Bot, Users, Lightbulb, ExternalLink } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Services = () => {
+  const navigate = useNavigate();
+
   const services = [
     {
-      icon: <Users className="w-8 h-8 text-red-600" />,
+      icon: <Users className="w-8 h-8 text-[#5433FF]" />,
       title: "ByteSprout",
       subtitle: "Build Authority, Generate Leads",
       description: "Help businesses grow online using AI Avatars to create educational content that builds authority and generates leads.",
@@ -22,7 +25,7 @@ const Services = () => {
       isExternal: true
     },
     {
-      icon: <Bot className="w-8 h-8 text-red-600" />,
+      icon: <Bot className="w-8 h-8 text-[#5433FF]" />,
       title: "AI Agent Development",
       subtitle: "Automate Boring Tasks",
       description: "Reduce resource costs by 1/10th or more with custom AI agents that handle repetitive work, letting your team focus on high-ROI activities.",
@@ -33,10 +36,10 @@ const Services = () => {
         "Seamless integration"
       ],
       cta: "Build AI Agents",
-      link: "#contact"
+      link: "/ai-agent-development"
     },
     {
-      icon: <Lightbulb className="w-8 h-8 text-red-600" />,
+      icon: <Lightbulb className="w-8 h-8 text-[#5433FF]" />,
       title: "AI Consultation",
       subtitle: "Scale Smart, Do More With Less",
       description: "Strategic guidance on leveraging AI to scale your business efficiently. We help you identify opportunities and create actionable implementation plans.",
@@ -47,7 +50,7 @@ const Services = () => {
         "ROI optimization"
       ],
       cta: "Get Strategy Session",
-      link: "#contact"
+      link: "/ai-consultation"
     }
   ];
 
@@ -67,7 +70,7 @@ const Services = () => {
           {services.map((service, index) => (
             <Card key={index} className="border border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
               <CardContent className="p-8">
-                <div className="mb-6">
+                <div className="mb-6 w-16 h-16 bg-[#5433FF]/10 rounded-full flex items-center justify-center">
                   {service.icon}
                 </div>
                 
@@ -75,7 +78,7 @@ const Services = () => {
                   {service.title}
                 </h3>
                 
-                <p className="text-red-600 font-medium mb-4">
+                <p className="text-[#5433FF] font-medium mb-4">
                   {service.subtitle}
                 </p>
                 
@@ -86,19 +89,19 @@ const Services = () => {
                 <ul className="space-y-2 mb-8">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-800">
-                      <div className="w-2 h-2 bg-red-600 rounded-full mr-3"></div>
+                      <div className="w-2 h-2 bg-[#5433FF] rounded-full mr-3"></div>
                       {feature}
                     </li>
                   ))}
                 </ul>
                 
                 <Button 
-                  className="w-full bg-red-600 hover:bg-red-700 text-white"
+                  className="w-full bg-[#5433FF] hover:bg-[#4328CC] text-white"
                   onClick={() => {
                     if (service.isExternal) {
                       window.open(service.link, '_blank');
                     } else {
-                      document.querySelector(service.link)?.scrollIntoView({ behavior: 'smooth' });
+                      navigate(service.link);
                     }
                   }}
                 >

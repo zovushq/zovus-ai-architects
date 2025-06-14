@@ -19,8 +19,8 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             <div className="text-center">
-              <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-red-600" />
+              <div className="w-16 h-16 bg-[#5433FF]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Target className="w-8 h-8 text-[#5433FF]" />
               </div>
               <h3 className="text-xl font-bold text-black mb-3">Results-Focused</h3>
               <p className="text-gray-800">
@@ -29,8 +29,8 @@ const About = () => {
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-red-600" />
+              <div className="w-16 h-16 bg-[#5433FF]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Zap className="w-8 h-8 text-[#5433FF]" />
               </div>
               <h3 className="text-xl font-bold text-black mb-3">Practical AI</h3>
               <p className="text-gray-800">
@@ -39,8 +39,8 @@ const About = () => {
             </div>
             
             <div className="text-center">
-              <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-red-600" />
+              <div className="w-16 h-16 bg-[#5433FF]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-[#5433FF]" />
               </div>
               <h3 className="text-xl font-bold text-black mb-3">Your Tech Partner</h3>
               <p className="text-gray-800">
@@ -55,7 +55,7 @@ const About = () => {
               Our goal is to help businesses scale profitably with automation, smart systems, and minimal overhead."
             </blockquote>
             <div className="text-center">
-              <div className="text-red-600 font-semibold">The ZOVUS Team</div>
+              <div className="text-[#5433FF] font-semibold">The ZOVUS Team</div>
             </div>
           </div>
         </div>

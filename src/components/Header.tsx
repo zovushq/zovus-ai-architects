@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -10,10 +11,8 @@ const Header = () => {
     const controlNavbar = () => {
       if (typeof window !== 'undefined') {
         if (window.scrollY > lastScrollY && window.scrollY > 100) {
-          // Scrolling down & past threshold
           setIsVisible(false);
         } else {
-          // Scrolling up
           setIsVisible(true);
         }
         setLastScrollY(window.scrollY);
@@ -27,6 +26,13 @@ const Header = () => {
       };
     }
   }, [lastScrollY]);
+
+  const handleSmoothScroll = (elementId: string) => {
+    const element = document.querySelector(elementId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <header 
@@ -45,20 +51,29 @@ const Header = () => {
               />
             </div>
             <nav className="hidden md:flex items-center space-x-8">
-              <a href="#services" className="text-black hover:text-red-600 transition-colors relative group">
+              <button 
+                onClick={() => handleSmoothScroll('#services')} 
+                className="text-black hover:text-[#5433FF] transition-colors relative group"
+              >
                 Services
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
-              </a>
-              <a href="#about" className="text-black hover:text-red-600 transition-colors relative group">
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#5433FF] transition-all duration-300 group-hover:w-full"></span>
+              </button>
+              <button 
+                onClick={() => handleSmoothScroll('#about')} 
+                className="text-black hover:text-[#5433FF] transition-colors relative group"
+              >
                 About
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
-              </a>
-              <a href="#contact" className="text-black hover:text-red-600 transition-colors relative group">
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#5433FF] transition-all duration-300 group-hover:w-full"></span>
+              </button>
+              <button 
+                onClick={() => handleSmoothScroll('#contact')} 
+                className="text-black hover:text-[#5433FF] transition-colors relative group"
+              >
                 Contact
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
-              </a>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#5433FF] transition-all duration-300 group-hover:w-full"></span>
+              </button>
             </nav>
-            <Button className="bg-red-600 hover:bg-red-700 text-white">
+            <Button className="bg-[#5433FF] hover:bg-[#4328CC] text-white">
               Get Started
             </Button>
           </div>
