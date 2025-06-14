@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Instagram, Linkedin, Facebook } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -25,6 +25,13 @@ const Footer = () => {
     }
   };
 
+  const handleServiceNavigation = (path: string) => {
+    navigate(path);
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
   const XIcon = () => (
     <svg
       viewBox="0 0 24 24"
@@ -36,16 +43,18 @@ const Footer = () => {
   );
 
   return (
-    <footer className="bg-black/90 backdrop-blur-lg border-t border-white/10 text-white py-12">
+    <footer className="bg-black/95 backdrop-blur-lg border-t border-white/10 text-white py-12">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-4">
-              <img 
-                src="/lovable-uploads/d0aecac6-a435-4cfd-84b5-69d4c7d47696.png" 
-                alt="ZOVUS Logo" 
-                className="h-10 w-auto"
-              />
+              <Link to="/">
+                <img 
+                  src="/lovable-uploads/d0aecac6-a435-4cfd-84b5-69d4c7d47696.png" 
+                  alt="ZOVUS Logo" 
+                  className="h-10 w-auto cursor-pointer"
+                />
+              </Link>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
               AI that drives results. Scale your business profitably with automation, 
@@ -70,7 +79,7 @@ const Footer = () => {
                 <Linkedin className="w-5 h-5" />
               </a>
               <a 
-                href="https://x.com/zovus" 
+                href="https://x.com/zovushq" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:text-gray-300 hover:bg-gray-300/20 hover:shadow-lg hover:shadow-gray-300/25 transition-all duration-300"
@@ -94,7 +103,7 @@ const Footer = () => {
               <li><a href="https://bytesprout.zovus.tech" target="_blank" rel="noopener noreferrer" className="hover:text-[#5433FF] transition-colors">ByteSprout</a></li>
               <li>
                 <button 
-                  onClick={() => navigate('/ai-agent-development')} 
+                  onClick={() => handleServiceNavigation('/ai-agent-development')} 
                   className="hover:text-[#5433FF] transition-colors text-left"
                 >
                   AI Agent Development
@@ -102,7 +111,7 @@ const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={() => navigate('/ai-consultation')} 
+                  onClick={() => handleServiceNavigation('/ai-consultation')} 
                   className="hover:text-[#5433FF] transition-colors text-left"
                 >
                   AI Consultation

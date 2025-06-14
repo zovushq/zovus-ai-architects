@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -99,5 +100,16 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Custom highlight color */
+  ::selection {
+    background-color: #5433FF;
+    color: white;
+  }
+  
+  ::-moz-selection {
+    background-color: #5433FF;
+    color: white;
   }
 }

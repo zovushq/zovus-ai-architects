@@ -21,7 +21,7 @@ const Hero = () => {
           </div>
           
           <h1 className="text-5xl md:text-6xl font-bold text-black mb-6 leading-tight">
-            Turnkey AI Solutions That Actually{' '}
+            Turnkey <span className="text-[#5433FF]">AI Solutions</span> That Actually{' '}
             <span className="text-[#5433FF]">Move the Needle</span>
           </h1>
           
@@ -41,18 +41,20 @@ const Hero = () => {
             </Button>
           </div>
           
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-[#5433FF] mb-2">10x</div>
-              <div className="text-gray-800">Resource Cost Reduction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-[#5433FF] mb-2">100%</div>
-              <div className="text-gray-800">Lead Conversion Focus</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-[#5433FF] mb-2">∞</div>
-              <div className="text-gray-800">Scalability Potential</div>
+          <div className="mt-16 bg-gray-50 rounded-2xl p-8 shadow-lg border border-gray-200">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-[#5433FF] mb-2">10x</div>
+                <div className="text-gray-800">Resource Cost Reduction</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-[#5433FF] mb-2">100%</div>
+                <div className="text-gray-800">Lead Conversion Focus</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-[#5433FF] mb-2">∞</div>
+                <div className="text-gray-800">Scalability Potential</div>
+              </div>
             </div>
           </div>
         </div>

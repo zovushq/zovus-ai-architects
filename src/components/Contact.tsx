@@ -33,7 +33,12 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-black">Email</h4>
-                      <p className="text-gray-800">zovus.inc@gmail.com</p>
+                      <a 
+                        href="mailto:zovus.inc@gmail.com" 
+                        className="text-gray-800 hover:underline transition-all duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gray-800 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+                      >
+                        zovus.inc@gmail.com
+                      </a>
                     </div>
                   </div>
                 </CardContent>

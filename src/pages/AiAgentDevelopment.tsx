@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -6,6 +5,10 @@ import { Button } from '@/components/ui/button';
 import { Bot, Zap, Target, Clock, DollarSign, TrendingUp, CheckCircle } from 'lucide-react';
 
 const AiAgentDevelopment = () => {
+  const handleContactClick = () => {
+    window.location.href = 'mailto:zovus.inc@gmail.com';
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -29,7 +32,11 @@ const AiAgentDevelopment = () => {
               Let your team focus on high-ROI activities while AI handles the repetitive work.
             </p>
             
-            <Button size="lg" className="bg-[#5433FF] hover:bg-[#4328CC] text-white px-8 py-4 text-lg">
+            <Button 
+              size="lg" 
+              className="bg-[#5433FF] hover:bg-[#4328CC] text-white px-8 py-4 text-lg"
+              onClick={handleContactClick}
+            >
               Start Building AI Agents
               <Zap className="w-5 h-5 ml-2" />
             </Button>
@@ -144,7 +151,11 @@ const AiAgentDevelopment = () => {
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Let's discuss how custom AI agents can transform your operations and reduce costs significantly.
           </p>
-          <Button size="lg" className="bg-white text-[#5433FF] hover:bg-gray-100 px-8 py-4 text-lg">
+          <Button 
+            size="lg" 
+            className="bg-white text-[#5433FF] hover:bg-gray-100 px-8 py-4 text-lg"
+            onClick={handleContactClick}
+          >
             Schedule a Consultation
           </Button>
         </div>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -6,6 +5,10 @@ import { Button } from '@/components/ui/button';
 import { Lightbulb, Target, TrendingUp, Users, CheckCircle, Star } from 'lucide-react';
 
 const AiConsultation = () => {
+  const handleContactClick = () => {
+    window.location.href = 'mailto:zovus.inc@gmail.com';
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -29,7 +32,11 @@ const AiConsultation = () => {
               We help you identify opportunities and create actionable implementation plans.
             </p>
             
-            <Button size="lg" className="bg-[#5433FF] hover:bg-[#4328CC] text-white px-8 py-4 text-lg">
+            <Button 
+              size="lg" 
+              className="bg-[#5433FF] hover:bg-[#4328CC] text-white px-8 py-4 text-lg"
+              onClick={handleContactClick}
+            >
               Get Strategic Guidance
               <Star className="w-5 h-5 ml-2" />
             </Button>
@@ -190,7 +197,11 @@ const AiConsultation = () => {
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             Let's create a strategic AI roadmap that transforms your business operations and drives measurable growth.
           </p>
-          <Button size="lg" className="bg-white text-[#5433FF] hover:bg-gray-100 px-8 py-4 text-lg">
+          <Button 
+            size="lg" 
+            className="bg-white text-[#5433FF] hover:bg-gray-100 px-8 py-4 text-lg"
+            onClick={handleContactClick}
+          >
             Book Your Strategy Session
           </Button>
         </div>

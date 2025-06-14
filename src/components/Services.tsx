@@ -8,6 +8,18 @@ import { useNavigate } from 'react-router-dom';
 const Services = () => {
   const navigate = useNavigate();
 
+  const handleNavigation = (link: string, isExternal: boolean = false) => {
+    if (isExternal) {
+      window.open(link, '_blank');
+    } else {
+      navigate(link);
+      // Scroll to top after navigation
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 100);
+    }
+  };
+
   const services = [
     {
       icon: <Users className="w-8 h-8 text-[#5433FF]" />,
@@ -42,7 +54,7 @@ const Services = () => {
       icon: <Lightbulb className="w-8 h-8 text-[#5433FF]" />,
       title: "AI Consultation",
       subtitle: "Scale Smart, Do More With Less",
-      description: "Strategic guidance on leveraging AI to scale your business efficiently. We help you identify opportunities and create actionable implementation plans.",
+      description: "Strategic AI guidance to scale your business efficiently. We help identify opportunities and build actionable plans.",
       features: [
         "AI strategy development",
         "Opportunity assessment",
@@ -97,13 +109,7 @@ const Services = () => {
                 
                 <Button 
                   className="w-full bg-[#5433FF] hover:bg-[#4328CC] text-white"
-                  onClick={() => {
-                    if (service.isExternal) {
-                      window.open(service.link, '_blank');
-                    } else {
-                      navigate(service.link);
-                    }
-                  }}
+                  onClick={() => handleNavigation(service.link, service.isExternal)}
                 >
                   {service.cta}
                   {service.isExternal && <ExternalLink className="w-4 h-4 ml-2" />}
