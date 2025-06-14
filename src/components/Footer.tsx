@@ -108,7 +108,9 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-semibold mb-4">Services</h4>
+            <h4 className="font-semibold mb-4 relative inline-block after:content-[''] after:block after:w-full after:h-0.5 after:bg-white after:mt-1 after:rounded-full">
+              Services
+            </h4>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <a 
