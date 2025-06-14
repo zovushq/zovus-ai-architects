@@ -2,11 +2,15 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Calendar } from 'lucide-react';
 
 const Contact = () => {
   const handleEmailClick = () => {
     window.location.href = 'mailto:zovus.inc@gmail.com';
+  };
+
+  const handleBookCallClick = () => {
+    window.open('https://calendly.com/zovus', '_blank');
   };
 
   return (
@@ -82,14 +86,25 @@ const Contact = () => {
               </div>
             </div>
             
-            <Button 
-              size="lg" 
-              className="w-full mt-8 bg-[#5433FF] hover:bg-[#4328CC] text-white"
-              onClick={handleEmailClick}
-            >
-              Send Email
-              <Mail className="w-5 h-5 ml-2" />
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+              <Button 
+                size="lg" 
+                className="flex-1 bg-[#5433FF] hover:bg-[#4328CC] text-white"
+                onClick={handleBookCallClick}
+              >
+                Book a Call
+                <Calendar className="w-5 h-5 ml-2" />
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                className="flex-1 border-[#5433FF] text-[#5433FF] hover:bg-[#5433FF] hover:text-white"
+                onClick={handleEmailClick}
+              >
+                Send Email
+                <Mail className="w-5 h-5 ml-2" />
+              </Button>
+            </div>
           </div>
         </div>
       </div>

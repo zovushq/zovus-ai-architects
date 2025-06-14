@@ -92,8 +92,16 @@ const Header = () => {
     }, 100);
   };
 
-  const getLinkClasses = (isActive: boolean) => {
+  const getNavLinkClasses = (isActive: boolean) => {
     return `transition-colors relative group ${
+      isActive 
+        ? 'text-[#5433FF]' 
+        : 'text-black hover:text-black'
+    }`;
+  };
+
+  const getServiceLinkClasses = (isActive: boolean) => {
+    return `transition-colors ${
       isActive 
         ? 'text-[#5433FF]' 
         : 'text-black hover:text-black'
@@ -122,10 +130,9 @@ const Header = () => {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
               <DropdownMenu>
-                <DropdownMenuTrigger className={`${getLinkClasses(false)} flex items-center space-x-1`}>
+                <DropdownMenuTrigger className={`${getServiceLinkClasses(false)} flex items-center space-x-1`}>
                   <span>Our Services</span>
                   <ChevronDown className="w-4 h-4" />
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#5433FF] transition-all duration-300 group-hover:w-full"></span>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="bg-white border border-gray-200 shadow-lg rounded-md p-2 min-w-[200px] z-50">
                   <DropdownMenuItem asChild>
@@ -133,25 +140,28 @@ const Header = () => {
                       href="https://bytesprout.zovus.tech" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="cursor-pointer px-3 py-2 text-black hover:text-[#5433FF] hover:bg-gray-50 rounded transition-colors w-full"
+                      className="cursor-pointer px-3 py-2 text-black hover:text-black hover:bg-gray-50 rounded transition-colors w-full relative group"
                     >
                       ByteSprout
+                      <span className="absolute bottom-0 left-3 w-0 h-0.5 bg-[#5433FF] transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
                     </a>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
                     <button 
                       onClick={() => handleServiceNavigation('/ai-agent-development')}
-                      className="cursor-pointer px-3 py-2 text-black hover:text-[#5433FF] hover:bg-gray-50 rounded transition-colors w-full text-left"
+                      className="cursor-pointer px-3 py-2 text-black hover:text-black hover:bg-gray-50 rounded transition-colors w-full text-left relative group"
                     >
                       AI Agent Development
+                      <span className="absolute bottom-0 left-3 w-0 h-0.5 bg-[#5433FF] transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
                     </button>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
                     <button 
                       onClick={() => handleServiceNavigation('/ai-consultation')}
-                      className="cursor-pointer px-3 py-2 text-black hover:text-[#5433FF] hover:bg-gray-50 rounded transition-colors w-full text-left"
+                      className="cursor-pointer px-3 py-2 text-black hover:text-black hover:bg-gray-50 rounded transition-colors w-full text-left relative group"
                     >
                       AI Consultation
+                      <span className="absolute bottom-0 left-3 w-0 h-0.5 bg-[#5433FF] transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
                     </button>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
@@ -159,14 +169,14 @@ const Header = () => {
               
               <button 
                 onClick={() => handleSmoothScroll('#about')} 
-                className={getLinkClasses(location.pathname === '/')}
+                className={getNavLinkClasses(location.pathname === '/')}
               >
                 About
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#5433FF] transition-all duration-300 group-hover:w-full"></span>
               </button>
               <button 
                 onClick={() => handleSmoothScroll('#contact')} 
-                className={getLinkClasses(location.pathname === '/')}
+                className={getNavLinkClasses(location.pathname === '/')}
               >
                 Contact
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#5433FF] transition-all duration-300 group-hover:w-full"></span>
@@ -174,8 +184,9 @@ const Header = () => {
             </nav>
 
             <div className="flex items-center space-x-4">
+              {/* Desktop Get Started Button */}
               <Button 
-                className="bg-[#5433FF] hover:bg-[#4328CC] text-white"
+                className="hidden md:block bg-[#5433FF] hover:bg-[#4328CC] text-white"
                 onClick={handleGetStartedClick}
               >
                 Get Started
@@ -237,6 +248,14 @@ const Header = () => {
                 >
                   Contact
                 </button>
+                
+                {/* Mobile Get Started Button */}
+                <Button 
+                  className="bg-[#5433FF] hover:bg-[#4328CC] text-white w-full mt-4"
+                  onClick={handleGetStartedClick}
+                >
+                  Get Started
+                </Button>
               </nav>
             </div>
           )}
