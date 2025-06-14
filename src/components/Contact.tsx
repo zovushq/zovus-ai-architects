@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -83,7 +84,12 @@ const Contact = () => {
                 Book a Call
                 <Calendar className="w-5 h-5 ml-2" />
               </Button>
-              <Button size="lg" variant="outline" onClick={handleEmailClick} className="flex-1 border-[#5433FF] text-[#5433FF] hover:bg-[#5433FF] hover:text-white py-[10px]">
+              <Button
+                size="lg"
+                variant="outline"
+                onClick={handleEmailClick}
+                className="flex-1 border-2 border-[#5433FF] text-[#5433FF] hover:bg-[#5433FF] hover:text-white py-[10px]"
+              >
                 Send Email
                 <Mail className="w-5 h-5 ml-2" />
               </Button>
