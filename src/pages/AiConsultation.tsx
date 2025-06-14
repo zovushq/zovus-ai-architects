@@ -46,7 +46,6 @@ const AiConsultation = () => {
               onClick={handleContactClick}
             >
               Get Strategic Guidance
-              <Star className="w-5 h-5 ml-2" />
             </Button>
           </div>
         </div>
