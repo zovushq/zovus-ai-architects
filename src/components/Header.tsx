@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Button } from '@/components/ui/button';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { 
@@ -15,6 +14,8 @@ const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [servicesMenuOpen, setServicesMenuOpen] = useState(false);
+  const dropdownTimeout = useRef<NodeJS.Timeout | null>(null);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -101,6 +102,18 @@ const Header = () => {
     }`;
   };
 
+  const handleDropdownEnter = () => {
+    if (dropdownTimeout.current) clearTimeout(dropdownTimeout.current);
+    setServicesMenuOpen(true);
+  };
+
+  const handleDropdownLeave = () => {
+    if (dropdownTimeout.current) clearTimeout(dropdownTimeout.current);
+    dropdownTimeout.current = setTimeout(() => {
+      setServicesMenuOpen(false);
+    }, 100); // add a small delay to allow submenu navigation
+  };
+
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ease-in-out ${
@@ -122,24 +135,37 @@ const Header = () => {
             
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              <DropdownMenu>
-                <DropdownMenuTrigger className={`${getServiceLinkClasses(false)} flex items-center space-x-1`}>
+              <div 
+                className="relative"
+                onMouseEnter={handleDropdownEnter}
+                onMouseLeave={handleDropdownLeave}
+              >
+                <button
+                  type="button"
+                  className={`${getServiceLinkClasses(false)} flex items-center space-x-1 focus:outline-none`}
+                  aria-haspopup="menu"
+                  aria-expanded={servicesMenuOpen}
+                  tabIndex={0}
+                >
                   <span>Our Services</span>
                   <ChevronDown className="w-4 h-4" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="bg-white border border-gray-200 shadow-lg rounded-md p-2 min-w-[200px] z-50">
-                  <DropdownMenuItem asChild>
+                </button>
+                {/* Dropdown on hover */}
+                {servicesMenuOpen && (
+                  <div
+                    className="absolute left-0 mt-2 bg-white border border-gray-200 shadow-lg rounded-md p-2 min-w-[200px] z-50"
+                    onMouseEnter={handleDropdownEnter}
+                    onMouseLeave={handleDropdownLeave}
+                  >
                     <a 
                       href="https://bytesprout.zovus.tech" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="cursor-pointer px-3 py-2 text-black hover:text-black hover:bg-gray-50 rounded transition-colors w-full relative group"
+                      className="cursor-pointer px-3 py-2 text-black hover:text-black hover:bg-gray-50 rounded transition-colors w-full relative group flex items-center"
                     >
                       ByteSprout
                       <span className="absolute bottom-0 left-3 w-0 h-0.5 bg-[#5433FF] transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
                     </a>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
                     <button 
                       onClick={() => handleServiceNavigation('/ai-agent-development')}
                       className="cursor-pointer px-3 py-2 text-black hover:text-black hover:bg-gray-50 rounded transition-colors w-full text-left relative group"
@@ -147,8 +173,6 @@ const Header = () => {
                       AI Agent Development
                       <span className="absolute bottom-0 left-3 w-0 h-0.5 bg-[#5433FF] transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
                     </button>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
                     <button 
                       onClick={() => handleServiceNavigation('/ai-consultation')}
                       className="cursor-pointer px-3 py-2 text-black hover:text-black hover:bg-gray-50 rounded transition-colors w-full text-left relative group"
@@ -156,13 +180,11 @@ const Header = () => {
                       AI Consultation
                       <span className="absolute bottom-0 left-3 w-0 h-0.5 bg-[#5433FF] transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
                     </button>
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-
+                  </div>
+                )}
+              </div>
               {/* Inserted refactored About and Contact */}
               <NavLinks handleSmoothScroll={handleSmoothScroll} />
-
             </nav>
 
             <div className="flex items-center space-x-4">
@@ -249,4 +271,3 @@ const Header = () => {
 };
 
 export default Header;
-
