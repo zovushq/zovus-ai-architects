@@ -18,7 +18,7 @@ const Hero = () => {
             AI That Actually Works
           </div>
           
-          <h1 className="md:text-6xl font-bold text-black mb-6 leading-tight text-4xl">
+          <h1 className="md:text-6xl font-bold text-black mb-6 leading-tight text-5xl">
             Turnkey <span className="text-[#5433FF]">AI Solutions</span> That Actually{' '}
             <span className="text-[#000000]">Move the Needle</span>
           </h1>
