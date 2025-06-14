@@ -8,7 +8,7 @@ const Contact = () => {
     window.location.href = 'mailto:zovus.inc@gmail.com';
   };
   const handleBookCallClick = () => {
-    window.open('https://calendly.com/zovus', '_blank');
+    window.open('https://cal.com/zovus/bytesprout', '_blank');
   };
   return <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-6">
