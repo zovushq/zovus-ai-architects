@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -11,7 +10,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ handleSmoothScroll }) => {
 
   const navLinkClasses = `
     transition-colors relative group font-medium
-    text-black
+    text-black font-normal
   `;
 
   const underlineClasses =

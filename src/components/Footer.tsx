@@ -117,7 +117,7 @@ const Footer = () => {
                   href="https://bytesprout.zovus.tech" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors"
+                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors font-normal"
                 >
                   ByteSprout
                 </a>
@@ -125,7 +125,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleServiceNavigation('/ai-agent-development')} 
-                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left"
+                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left font-normal"
                 >
                   AI Agent Development
                 </button>
@@ -133,7 +133,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleServiceNavigation('/ai-consultation')} 
-                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left"
+                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left font-normal"
                 >
                   AI Consultation
                 </button>
@@ -149,7 +149,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleSmoothScroll('#about')} 
-                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left"
+                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left font-normal"
                 >
                   About
                 </button>
@@ -157,7 +157,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleSmoothScroll('#contact')} 
-                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left"
+                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left font-normal"
                 >
                   Contact
                 </button>
@@ -165,7 +165,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleSmoothScroll('#services')} 
-                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left"
+                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left font-normal"
                 >
                   Services
                 </button>
