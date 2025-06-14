@@ -1,18 +1,16 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Zap } from 'lucide-react';
-
 const Hero = () => {
   const handleSmoothScroll = (elementId: string) => {
     const element = document.querySelector(elementId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section className="pt-24 pb-20 bg-white">
+  return <section className="pt-24 pb-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center px-4 py-2 bg-[#5433FF]/10 text-[#5433FF] rounded-full text-sm font-medium mb-8">
@@ -22,7 +20,7 @@ const Hero = () => {
           
           <h1 className="text-5xl md:text-6xl font-bold text-black mb-6 leading-tight">
             Turnkey <span className="text-[#5433FF]">AI Solutions</span> That Actually{' '}
-            <span className="text-[#5433FF]">Move the Needle</span>
+            <span className="text-[#000000]">Move the Needle</span>
           </h1>
           
           <p className="text-xl text-gray-800 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -31,11 +29,7 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="bg-[#5433FF] hover:bg-[#4328CC] text-white px-8 py-4 text-lg"
-              onClick={() => handleSmoothScroll('#services')}
-            >
+            <Button size="lg" className="bg-[#5433FF] hover:bg-[#4328CC] text-white px-8 py-4 text-lg" onClick={() => handleSmoothScroll('#services')}>
               Scale Your Business
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
@@ -59,8 +53,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
