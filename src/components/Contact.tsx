@@ -33,7 +33,11 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-black">Email</h4>
-                      <a href="mailto:zovus.inc@gmail.com" className="text-gray-800 hover:underline transition-all duration-300 relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-gray-800 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left">
+                      <a
+                        href="mailto:zovus.inc@gmail.com"
+                        className="text-gray-800 transition-all duration-300 relative after:content-[''] after:absolute after:left-0 after:w-full after:h-[1.2px] after:bg-[#5433ff33] after:bottom-[-4px] after:scale-x-0 hover:after:scale-x-100 after:origin-bottom-left after:transition-transform after:duration-300 after:rounded-full hover:after:bg-[#5433FF] focus:after:bg-[#5433FF]"
+                        style={{ WebkitTapHighlightColor: "transparent" }}
+                      >
                         zovus.inc@gmail.com
                       </a>
                     </div>
