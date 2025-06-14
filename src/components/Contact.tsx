@@ -35,7 +35,7 @@ const Contact = () => {
                       <h4 className="font-semibold text-black">Email</h4>
                       <a
                         href="mailto:zovus.inc@gmail.com"
-                        className="text-gray-800 transition-all duration-300 relative after:content-[''] after:absolute after:left-0 after:w-full after:h-[1.2px] after:bg-[#5433ff33] after:bottom-[-4px] after:scale-x-0 hover:after:scale-x-100 after:origin-bottom-left after:transition-transform after:duration-300 after:rounded-full hover:after:bg-[#5433FF] focus:after:bg-[#5433FF]"
+                        className="text-gray-800 transition-all duration-300 relative after:content-[''] after:absolute after:left-0 after:w-full after:h-[1.2px] after:bg-gray-500 after:bottom-[-4px] after:scale-x-0 hover:after:scale-x-100 after:origin-bottom-left after:transition-transform after:duration-300 after:rounded-full hover:after:bg-[#5433FF] focus:after:bg-[#5433FF]"
                         style={{ WebkitTapHighlightColor: "transparent" }}
                       >
                         zovus.inc@gmail.com
@@ -104,3 +104,4 @@ const Contact = () => {
     </section>;
 };
 export default Contact;
+
