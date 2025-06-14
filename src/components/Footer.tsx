@@ -117,7 +117,7 @@ const Footer = () => {
                   href="https://bytesprout.zovus.tech" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-white hover:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors"
+                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors"
                 >
                   ByteSprout
                 </a>
