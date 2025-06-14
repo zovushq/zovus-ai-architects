@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Instagram, Linkedin, Facebook } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
@@ -141,7 +140,9 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-semibold mb-4">Company</h4>
+            <h4 className="font-semibold mb-4 relative inline-block after:content-[''] after:block after:w-full after:h-0.5 after:bg-white after:mt-1 after:rounded-full">
+              Company
+            </h4>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <button 
