@@ -22,7 +22,7 @@ const Services = () => {
 
   const services = [
     {
-      icon: <Users className="w-8 h-8 text-[#5433FF]" />,
+      icon: <Users className="w-8 h-8 text-[#E40223]" />,
       title: "ByteSprout",
       subtitle: "Build Authority, Generate Leads",
       description:
@@ -38,7 +38,7 @@ const Services = () => {
       isExternal: true
     },
     {
-      icon: <Bot className="w-8 h-8 text-[#5433FF]" />,
+      icon: <Bot className="w-8 h-8 text-[#E40223]" />,
       title: "AI Agent Development",
       subtitle: "Automate Boring Tasks",
       description: "Reduce resource costs by 1/10th or more with custom AI agents that handle repetitive work, letting your team focus on high-ROI activities.",
@@ -52,7 +52,7 @@ const Services = () => {
       link: "/ai-agent-development"
     },
     {
-      icon: <Lightbulb className="w-8 h-8 text-[#5433FF]" />,
+      icon: <Lightbulb className="w-8 h-8 text-[#E40223]" />,
       title: "AI Consultation",
       subtitle: "Scale Smart, Do More With Less",
       description: "Strategic AI guidance to scale your business efficiently. We help identify opportunities and build actionable plans.",
@@ -68,7 +68,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gray-50">
+    <section id="services" className="py-20 bg-[#FEEAED]">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-black mb-4">
@@ -83,7 +83,7 @@ const Services = () => {
           {services.map((service, index) => (
             <Card key={index} className="border border-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white">
               <CardContent className="p-8">
-                <div className="mb-6 w-16 h-16 bg-[#5433FF]/10 rounded-full flex items-center justify-center">
+                <div className="mb-6 w-16 h-16 bg-[#FEEAED] rounded-full flex items-center justify-center">
                   {service.icon}
                 </div>
                 
@@ -91,7 +91,7 @@ const Services = () => {
                   {service.title}
                 </h3>
                 
-                <p className="text-[#5433FF] font-medium mb-4">
+                <p className="text-[#E40223] font-medium mb-4">
                   {service.subtitle}
                 </p>
                 
@@ -102,14 +102,14 @@ const Services = () => {
                 <ul className="space-y-2 mb-8">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-gray-800">
-                      <div className="w-2 h-2 bg-[#5433FF] rounded-full mr-3"></div>
+                      <div className="w-2 h-2 bg-[#E40223] rounded-full mr-3"></div>
                       {feature}
                     </li>
                   ))}
                 </ul>
                 
                 <Button 
-                  className="w-full bg-[#5433FF] hover:bg-[#4328CC] text-white"
+                  className="w-full"
                   onClick={() => handleNavigation(service.link, service.isExternal)}
                 >
                   {service.cta}
