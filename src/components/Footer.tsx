@@ -53,8 +53,18 @@ const Footer = () => {
   );
 
   // Reusable style for updated underline: #E40223 on hover
-  const hoverUnderline =
-    "text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#E40223] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors font-normal";
+  // Updated: Add 'active' color #E40223 to menu items if "active" (matches current location)
+  // We get current pathname/hash via window.location
+  const getActiveMenuClass = (to: string, exact = false) => {
+    const isActive = exact
+      ? window.location.pathname === to
+      : window.location.pathname.startsWith(to) ||
+        window.location.hash === to;
+    // Active: #E40223, else text-white. Always keep underline & hover effects.
+    return `relative inline-block text-white hover:text-white active:text-[#E40223] after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#E40223] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors font-normal ${
+      isActive ? '!text-[#E40223]' : ''
+    }`;
+  };
 
   return (
     <footer className="bg-black/95 backdrop-blur-lg border-t border-white/10 text-white py-12">
@@ -120,8 +130,8 @@ const Footer = () => {
                 <a 
                   href="https://bytesprout.zovus.tech" 
                   target="_blank" 
-                  rel="noopener noreferrer" 
-                  className={hoverUnderline}
+                  rel="noopener noreferrer"
+                  className={getActiveMenuClass('/bytesprout')}
                 >
                   ByteSprout
                 </a>
@@ -129,7 +139,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleServiceNavigation('/ai-agent-development')} 
-                  className={hoverUnderline + " text-left"}
+                  className={getActiveMenuClass('/ai-agent-development', true) + " text-left"}
                 >
                   AI Agent Development
                 </button>
@@ -137,7 +147,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleServiceNavigation('/ai-consultation')} 
-                  className={hoverUnderline + " text-left"}
+                  className={getActiveMenuClass('/ai-consultation', true) + " text-left"}
                 >
                   AI Consultation
                 </button>
@@ -153,7 +163,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleSmoothScroll('#about')} 
-                  className={hoverUnderline + " text-left"}
+                  className={getActiveMenuClass('#about') + " text-left"}
                 >
                   About
                 </button>
@@ -161,7 +171,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleSmoothScroll('#contact')} 
-                  className={hoverUnderline + " text-left"}
+                  className={getActiveMenuClass('#contact') + " text-left"}
                 >
                   Contact
                 </button>
@@ -169,7 +179,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleSmoothScroll('#services')} 
-                  className={hoverUnderline + " text-left"}
+                  className={getActiveMenuClass('#services') + " text-left"}
                 >
                   Services
                 </button>
