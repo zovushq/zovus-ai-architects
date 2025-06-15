@@ -36,7 +36,7 @@ const AiAgentDevelopment = () => {
               Let your team focus on high-ROI activities while AI handles the repetitive work.
             </p>
             
-            <Button size="lg" className="bg-black text-white border border-transparent px-8 py-4 text-lg hover:bg-white hover:text-[#E40223] hover:border-[#E40223] transition-colors" onClick={handleContactClick}>
+            <Button size="lg" onClick={handleContactClick} className="bg-black text-white border border-transparent px-8 py-4 hover:bg-white hover:text-[#E40223] hover:border-[#E40223] transition-colors text-base">
               Start Building AI Agents
             </Button>
           </div>
