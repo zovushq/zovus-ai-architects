@@ -72,15 +72,15 @@ const Contact = () => {
             
             <div className="space-y-4">
               <div className="flex items-center text-gray-800">
-                <div className="w-2 h-2 bg-[#5433FF] rounded-full mr-3"></div>
+                <div className="w-2 h-2 bg-[#E40223] rounded-full mr-3"></div>
                 Free consultation call
               </div>
               <div className="flex items-center text-gray-800">
-                <div className="w-2 h-2 bg-[#5433FF] rounded-full mr-3"></div>
+                <div className="w-2 h-2 bg-[#E40223] rounded-full mr-3"></div>
                 Custom solution proposal
               </div>
               <div className="flex items-center text-gray-800">
-                <div className="w-2 h-2 bg-[#5433FF] rounded-full mr-3"></div>
+                <div className="w-2 h-2 bg-[#E40223] rounded-full mr-3"></div>
                 Implementation roadmap
               </div>
             </div>
