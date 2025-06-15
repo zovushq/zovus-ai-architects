@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Target, Zap, Users } from 'lucide-react';
-
 const About = () => {
-  return (
-    <section id="about" className="py-20 bg-white">
+  return <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
@@ -49,7 +46,7 @@ const About = () => {
             </div>
           </div>
           
-          <div className="bg-[#FEEAED] rounded-2xl p-8 shadow-lg border border-gray-200">
+          <div className="rounded-2xl p-8 shadow-lg border border-gray-200 bg-gray-50">
             <blockquote className="text-xl font-medium text-black text-center mb-6">
               "At ZOVUS, we believe AI shouldn't just be hype — it should drive results. 
               Our goal is to help businesses scale profitably with automation, smart systems, and minimal overhead."
@@ -60,8 +57,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
