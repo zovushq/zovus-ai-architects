@@ -9,6 +9,9 @@ interface ServicesDropdownMenuProps {
   onServiceNavigation: (path: string) => void;
 }
 
+const underlineHoverClass =
+  "absolute bottom-0 left-3 w-0 h-0.5 bg-[#E40223] transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]";
+
 const ServicesDropdownMenu: React.FC<ServicesDropdownMenuProps> = ({
   open,
   onEnter,
@@ -43,21 +46,21 @@ const ServicesDropdownMenu: React.FC<ServicesDropdownMenuProps> = ({
           className="cursor-pointer px-3 py-2 text-black hover:text-black hover:bg-gray-50 rounded transition-colors w-full relative group flex items-center"
         >
           ByteSprout
-          <span className="absolute bottom-0 left-3 w-0 h-0.5 bg-[#5433FF] transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
+          <span className={underlineHoverClass}></span>
         </a>
         <button 
           onClick={() => onServiceNavigation('/ai-agent-development')}
           className="cursor-pointer px-3 py-2 text-black hover:text-black hover:bg-gray-50 rounded transition-colors w-full text-left relative group"
         >
           AI Agent Development
-          <span className="absolute bottom-0 left-3 w-0 h-0.5 bg-[#5433FF] transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
+          <span className={underlineHoverClass}></span>
         </button>
         <button 
           onClick={() => onServiceNavigation('/ai-consultation')}
           className="cursor-pointer px-3 py-2 text-black hover:text-black hover:bg-gray-50 rounded transition-colors w-full text-left relative group"
         >
           AI Consultation
-          <span className="absolute bottom-0 left-3 w-0 h-0.5 bg-[#5433FF] transition-all duration-300 group-hover:w-[calc(100%-1.5rem)]"></span>
+          <span className={underlineHoverClass}></span>
         </button>
       </div>
     )}
@@ -65,3 +68,4 @@ const ServicesDropdownMenu: React.FC<ServicesDropdownMenuProps> = ({
 );
 
 export default ServicesDropdownMenu;
+
