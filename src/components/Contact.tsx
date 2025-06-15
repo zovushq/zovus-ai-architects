@@ -63,7 +63,7 @@ const Contact = () => {
             </div>
           </div>
           
-          <div className="bg-gradient-to-br from-[#5433FF]/5 to-white p-8 rounded-2xl border border-gray-200">
+          <div className="bg-[#F9FAFB] p-8 rounded-2xl border border-gray-200">
             <h3 className="text-2xl font-bold text-black mb-6">Start Your AI Journey</h3>
             <p className="text-gray-800 mb-8 leading-relaxed">
               Ready to automate your processes, reduce costs, and scale your business? 
