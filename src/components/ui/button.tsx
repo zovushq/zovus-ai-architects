@@ -1,7 +1,7 @@
+
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
-
 import { cn } from "@/lib/utils"
 
 // Button color classes based on your instructions
@@ -11,8 +11,8 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: 
-          // Normal: bg-black text-white | Hover: bg-[#E40223] text-white
-          "bg-black text-white hover:bg-[#E40223] hover:text-white",
+          // Normal: bg-black text-white | Hover: bg-white text-[#E40223]
+          "bg-black text-white hover:bg-white hover:text-[#E40223] hover:border hover:border-[#E40223]",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
@@ -58,3 +58,4 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = "Button"
 
 export { Button, buttonVariants }
+
