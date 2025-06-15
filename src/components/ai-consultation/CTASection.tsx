@@ -5,7 +5,7 @@ type CTASectionProps = {
 };
 const CTASection: React.FC<CTASectionProps> = ({
   onContact
-}) => <section className="py-20 bg-[#c6001e]">
+}) => <section className="py-20 bg-[#e40223]">
     <div className="container mx-auto px-6 text-center">
       <h2 className="text-4xl font-bold text-white mb-6">
         Ready to Scale With AI?
