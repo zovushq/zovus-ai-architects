@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
@@ -13,8 +14,9 @@ const NavLinks: React.FC<NavLinksProps> = ({ handleSmoothScroll }) => {
     text-black font-normal
   `;
 
+  // Updated underline color to #E40223 for navbar on hover
   const underlineClasses =
-    "absolute bottom-0 left-0 w-full h-0.5 bg-[#5433FF] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300";
+    "absolute bottom-0 left-0 w-full h-0.5 bg-[#E40223] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300";
 
   return (
     <>
@@ -27,7 +29,6 @@ const NavLinks: React.FC<NavLinksProps> = ({ handleSmoothScroll }) => {
         <span
           className={underlineClasses}
           style={{
-            // Always show underline if on home page, otherwise only on hover
             transform:
               location.pathname === '/' ? undefined : 'scaleX(0)',
           }}
@@ -42,7 +43,6 @@ const NavLinks: React.FC<NavLinksProps> = ({ handleSmoothScroll }) => {
         <span
           className={underlineClasses}
           style={{
-            // Always show underline if on home page, otherwise only on hover
             transform:
               location.pathname === '/' ? undefined : 'scaleX(0)',
           }}

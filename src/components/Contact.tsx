@@ -28,8 +28,9 @@ const Contact = () => {
               <Card className="border border-gray-200 shadow-sm">
                 <CardContent className="p-6">
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-[#5433FF]/10 rounded-full flex items-center justify-center mr-4">
-                      <Mail className="w-6 h-6 text-[#5433FF]" />
+                    {/* ICON: email, color #E40223, bg-light red */}
+                    <div className="w-12 h-12 bg-[#E40223]/10 rounded-full flex items-center justify-center mr-4">
+                      <Mail className="w-6 h-6 text-[#E40223]" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-black">Email</h4>
@@ -48,8 +49,9 @@ const Contact = () => {
               <Card className="border border-gray-200 shadow-sm">
                 <CardContent className="p-6">
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-[#5433FF]/10 rounded-full flex items-center justify-center mr-4">
-                      <Clock className="w-6 h-6 text-[#5433FF]" />
+                    {/* ICON: response time, color #E40223, bg-light red */}
+                    <div className="w-12 h-12 bg-[#E40223]/10 rounded-full flex items-center justify-center mr-4">
+                      <Clock className="w-6 h-6 text-[#E40223]" />
                     </div>
                     <div>
                       <h4 className="font-semibold text-black">Response Time</h4>
@@ -84,15 +86,21 @@ const Contact = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <Button size="lg" onClick={handleBookCallClick} className="flex-1 bg-[#5433FF] hover:bg-[#4328CC] text-white px-0 py-[10px]">
+              {/* book a call: black bg, white text */}
+              <Button 
+                size="lg" 
+                onClick={handleBookCallClick} 
+                className="flex-1 bg-black text-white hover:bg-[#E40223] hover:text-white px-0 py-[10px] border-none"
+              >
                 Book a Call
                 <Calendar className="w-5 h-5 ml-2" />
               </Button>
+              {/* send email: black outline, black text normal, red bg/white hover */}
               <Button
                 size="lg"
                 variant="outline"
                 onClick={handleEmailClick}
-                className="flex-1 border-2 border-[#5433FF] text-[#5433FF] hover:bg-[#5433FF] hover:text-white py-[10px]"
+                className="flex-1 border-2 border-black text-black bg-white hover:bg-[#E40223] hover:text-white hover:border-[#E40223] py-[10px]"
               >
                 Send Email
                 <Mail className="w-5 h-5 ml-2" />
@@ -104,4 +112,3 @@ const Contact = () => {
     </section>;
 };
 export default Contact;
-

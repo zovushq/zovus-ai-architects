@@ -52,6 +52,10 @@ const Footer = () => {
     </svg>
   );
 
+  // Reusable style for updated underline: #E40223 on hover
+  const hoverUnderline =
+    "text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#E40223] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors font-normal";
+
   return (
     <footer className="bg-black/95 backdrop-blur-lg border-t border-white/10 text-white py-12">
       <div className="container mx-auto px-6">
@@ -117,7 +121,7 @@ const Footer = () => {
                   href="https://bytesprout.zovus.tech" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors font-normal"
+                  className={hoverUnderline}
                 >
                   ByteSprout
                 </a>
@@ -125,7 +129,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleServiceNavigation('/ai-agent-development')} 
-                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left font-normal"
+                  className={hoverUnderline + " text-left"}
                 >
                   AI Agent Development
                 </button>
@@ -133,7 +137,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleServiceNavigation('/ai-consultation')} 
-                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left font-normal"
+                  className={hoverUnderline + " text-left"}
                 >
                   AI Consultation
                 </button>
@@ -149,7 +153,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleSmoothScroll('#about')} 
-                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left font-normal"
+                  className={hoverUnderline + " text-left"}
                 >
                   About
                 </button>
@@ -157,7 +161,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleSmoothScroll('#contact')} 
-                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left font-normal"
+                  className={hoverUnderline + " text-left"}
                 >
                   Contact
                 </button>
@@ -165,7 +169,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleSmoothScroll('#services')} 
-                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left font-normal"
+                  className={hoverUnderline + " text-left"}
                 >
                   Services
                 </button>

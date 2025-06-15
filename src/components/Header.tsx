@@ -124,8 +124,9 @@ const Header = () => {
             />
 
             <div className="flex items-center space-x-4">
+              {/* Get Started: black bg/white text, hover red/white */}
               <Button 
-                className="hidden md:block bg-[#5433FF] hover:bg-[#4328CC] text-white"
+                className="hidden md:block bg-black text-white hover:bg-[#E40223] hover:text-white"
                 onClick={handleGetStartedClick}
               >
                 Get Started
