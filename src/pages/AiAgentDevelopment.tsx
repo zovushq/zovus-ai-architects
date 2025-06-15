@@ -168,7 +168,7 @@ const AiAgentDevelopment = () => {
             </Button>
             <Button 
               size="lg" 
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#E40223] px-8 py-4 text-lg transition-colors"
+              className="bg-white text-[#E40223] border-2 border-white px-8 py-4 text-lg hover:bg-black hover:text-white transition-colors"
               onClick={() => window.open('https://cal.com/zovus/bytesprout', '_blank')}
             >
               Book a Meeting
