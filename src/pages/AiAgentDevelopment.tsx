@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -43,7 +42,7 @@ const AiAgentDevelopment = () => {
             
             <Button 
               size="lg" 
-              className="bg-black text-white px-8 py-4 text-lg hover:bg-[#E40223] hover:text-white transition-colors"
+              className="bg-black text-white border border-transparent px-8 py-4 text-lg hover:bg-white hover:text-[#E40223] hover:border-[#E40223] transition-colors"
               onClick={handleContactClick}
             >
               Start Building AI Agents
@@ -162,7 +161,7 @@ const AiAgentDevelopment = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg" 
-              className="bg-black text-white px-8 py-4 text-lg hover:bg-[#E40223] hover:text-white transition-colors"
+              className="bg-black text-white border border-transparent px-8 py-4 text-lg hover:bg-white hover:text-[#E40223] hover:border-[#E40223] transition-colors"
               onClick={handleContactClick}
             >
               Email Us
@@ -184,4 +183,3 @@ const AiAgentDevelopment = () => {
 };
 
 export default AiAgentDevelopment;
-
