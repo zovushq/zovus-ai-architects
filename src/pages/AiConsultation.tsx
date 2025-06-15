@@ -1,10 +1,8 @@
-
 import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Lightbulb, Target, TrendingUp, Users, CheckCircle, Star } from 'lucide-react';
-
 const AiConsultation = () => {
   useEffect(() => {
     document.title = 'AI Strategy Consulting | Unlock Growth with ZOVUS';
@@ -13,13 +11,10 @@ const AiConsultation = () => {
       metaDescription.setAttribute('content', 'Get expert guidance to identify high-impact AI opportunities for your business. ZOVUS delivers strategic AI consulting with clear, actionable implementation plans.');
     }
   }, []);
-
   const handleContactClick = () => {
     window.location.href = 'mailto:zovus.inc@gmail.com';
   };
-
-  return (
-    <div className="min-h-screen bg-white">
+  return <div className="min-h-screen bg-white">
       <Header />
       
       {/* Hero Section */}
@@ -41,10 +36,7 @@ const AiConsultation = () => {
               We help you identify opportunities and create actionable implementation plans.
             </p>
             
-            <Button 
-              size="lg" 
-              onClick={handleContactClick}
-            >
+            <Button size="lg" onClick={handleContactClick}>
               Get Strategic Guidance
             </Button>
           </div>
@@ -108,7 +100,7 @@ const AiConsultation = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-[#FEEAED]">
+      <section className="py-20 bg-[#f9f8fe]">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-black mb-4">
@@ -205,19 +197,10 @@ const AiConsultation = () => {
             Let's create a strategic AI roadmap that transforms your business operations and drives measurable growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
-              variant="outline"
-              onClick={handleContactClick}
-            >
+            <Button size="lg" variant="outline" onClick={handleContactClick}>
               Email Us
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-[#E40223] hover:border-white"
-              onClick={() => window.open('https://cal.com/zovus/bytesprout', '_blank')}
-            >
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#E40223] hover:border-white" onClick={() => window.open('https://cal.com/zovus/bytesprout', '_blank')}>
               Book a Meeting
             </Button>
           </div>
@@ -225,9 +208,6 @@ const AiConsultation = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default AiConsultation;
-
