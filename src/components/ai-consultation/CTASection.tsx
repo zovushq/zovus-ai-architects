@@ -1,13 +1,11 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
-
 type CTASectionProps = {
   onContact: () => void;
 };
-
-const CTASection: React.FC<CTASectionProps> = ({ onContact }) => (
-  <section className="py-20 bg-[#E40223]">
+const CTASection: React.FC<CTASectionProps> = ({
+  onContact
+}) => <section className="py-20 bg-[#c6001e]">
     <div className="container mx-auto px-6 text-center">
       <h2 className="text-4xl font-bold text-white mb-6">
         Ready to Scale With AI?
@@ -19,16 +17,10 @@ const CTASection: React.FC<CTASectionProps> = ({ onContact }) => (
         <Button size="lg" variant="outline" onClick={onContact}>
           Email Us
         </Button>
-        <Button
-          size="lg"
-          className="bg-white text-[#E40223] border border-[#E40223] hover:bg-black hover:text-white hover:border-black transition-colors"
-          onClick={() => window.open('https://cal.com/zovus/bytesprout', '_blank')}
-        >
+        <Button size="lg" className="bg-white text-[#E40223] border border-[#E40223] hover:bg-black hover:text-white hover:border-black transition-colors" onClick={() => window.open('https://cal.com/zovus/bytesprout', '_blank')}>
           Book a Meeting
         </Button>
       </div>
     </div>
-  </section>
-);
-
+  </section>;
 export default CTASection;
