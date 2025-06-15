@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Zap } from 'lucide-react';
@@ -36,7 +35,7 @@ const Hero = () => {
             </Button>
           </div>
           
-          <div className="mt-16 bg-[#FEEAED] rounded-2xl p-8 shadow-lg border border-gray-200">
+          <div className="mt-16 rounded-2xl p-8 shadow-lg border border-gray-200 bg-[F9FAFB] bg-gray-50">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="text-3xl font-bold text-[#E40223] mb-2">10x</div>
