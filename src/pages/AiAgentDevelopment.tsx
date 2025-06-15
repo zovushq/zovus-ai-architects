@@ -3,7 +3,6 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Bot, Target, Clock, DollarSign, TrendingUp, CheckCircle } from 'lucide-react';
-
 const AiAgentDevelopment = () => {
   useEffect(() => {
     document.title = 'Custom AI Agent Development | Build Smart Automation with ZOVUS';
@@ -12,13 +11,10 @@ const AiAgentDevelopment = () => {
       metaDescription.setAttribute('content', 'ZOVUS builds AI agents tailored to your business—handling lead gen, support, operations, and more. Automate intelligently and boost efficiency without complexity.');
     }
   }, []);
-
   const handleContactClick = () => {
     window.location.href = 'mailto:zovus.inc@gmail.com';
   };
-
-  return (
-    <div className="min-h-screen bg-white">
+  return <div className="min-h-screen bg-white">
       <Header />
       
       {/* Hero Section */}
@@ -40,11 +36,7 @@ const AiAgentDevelopment = () => {
               Let your team focus on high-ROI activities while AI handles the repetitive work.
             </p>
             
-            <Button 
-              size="lg" 
-              className="bg-black text-white border border-transparent px-8 py-4 text-lg hover:bg-white hover:text-[#E40223] hover:border-[#E40223] transition-colors"
-              onClick={handleContactClick}
-            >
+            <Button size="lg" className="bg-black text-white border border-transparent px-8 py-4 text-lg hover:bg-white hover:text-[#E40223] hover:border-[#E40223] transition-colors" onClick={handleContactClick}>
               Start Building AI Agents
             </Button>
           </div>
@@ -98,7 +90,7 @@ const AiAgentDevelopment = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-[#f9f8fe]">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-black mb-4">
@@ -159,18 +151,10 @@ const AiAgentDevelopment = () => {
             Let's discuss how custom AI agents can transform your operations and reduce costs significantly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg" 
-              className="border-2 border-white text-white bg-transparent px-8 py-4 text-lg hover:bg-white hover:text-[#E40223] transition-colors"
-              onClick={handleContactClick}
-            >
+            <Button size="lg" className="border-2 border-white text-white bg-transparent px-8 py-4 text-lg hover:bg-white hover:text-[#E40223] transition-colors" onClick={handleContactClick}>
               Email Us
             </Button>
-            <Button 
-              size="lg" 
-              className="bg-white text-[#E40223] border-2 border-white px-8 py-4 text-lg hover:bg-black hover:text-white transition-colors"
-              onClick={() => window.open('https://cal.com/zovus/bytesprout', '_blank')}
-            >
+            <Button size="lg" className="bg-white text-[#E40223] border-2 border-white px-8 py-4 text-lg hover:bg-black hover:text-white transition-colors" onClick={() => window.open('https://cal.com/zovus/bytesprout', '_blank')}>
               Book a Meeting
             </Button>
           </div>
@@ -178,8 +162,6 @@ const AiAgentDevelopment = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default AiAgentDevelopment;
