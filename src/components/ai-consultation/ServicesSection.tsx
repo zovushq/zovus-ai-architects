@@ -1,9 +1,6 @@
-
 import React from "react";
 import { CheckCircle } from "lucide-react";
-
-const ServicesSection: React.FC = () => (
-  <section className="py-20 bg-[#f9f8fe]">
+const ServicesSection: React.FC = () => <section className="py-20 bg-gray-50">
     <div className="container mx-auto px-6">
       <div className="text-center mb-16">
         <h2 className="text-4xl font-bold text-black mb-4">
@@ -84,7 +81,5 @@ const ServicesSection: React.FC = () => (
         </div>
       </div>
     </div>
-  </section>
-);
-
+  </section>;
 export default ServicesSection;
