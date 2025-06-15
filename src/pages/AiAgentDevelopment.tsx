@@ -161,7 +161,7 @@ const AiAgentDevelopment = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg" 
-              className="bg-black text-white border border-transparent px-8 py-4 text-lg hover:bg-white hover:text-[#E40223] hover:border-[#E40223] transition-colors"
+              className="border-2 border-white text-white bg-transparent px-8 py-4 text-lg hover:bg-white hover:text-[#E40223] transition-colors"
               onClick={handleContactClick}
             >
               Email Us
