@@ -59,46 +59,46 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center mb-4">
               <button onClick={handleLogoClick} className="cursor-pointer">
-                <img
-                  src="/lovable-uploads/c1e50f00-59fa-4db7-ae4b-cada6a80ddd1.png"
-                  alt="ZOVUS company logo – AI-powered business scaling solutions"
+                <img 
+                  src="/lovable-uploads/c1e50f00-59fa-4db7-ae4b-cada6a80ddd1.png" 
+                  alt="ZOVUS company logo – AI-powered business scaling solutions" 
                   className="h-10 w-auto"
                 />
               </button>
             </div>
             <p className="text-gray-400 mb-6 max-w-md">
-              AI that drives results. Scale your business profitably with automation,
+              AI that drives results. Scale your business profitably with automation, 
               smart systems, and minimal overhead.
             </p>
-
+            
             <div className="flex space-x-4">
-              <a
-                href="https://www.instagram.com/zovushq/"
-                target="_blank"
+              <a 
+                href="https://www.instagram.com/zovushq/" 
+                target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:text-pink-500 hover:bg-pink-500/20 hover:shadow-lg hover:shadow-pink-500/25 transition-all duration-300"
               >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a
-                href="https://www.linkedin.com/company/zovushq"
-                target="_blank"
+              <a 
+                href="https://www.linkedin.com/company/zovushq" 
+                target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:text-blue-400 hover:bg-blue-400/20 hover:shadow-lg hover:shadow-blue-400/25 transition-all duration-300"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a
-                href="https://x.com/zovushq"
-                target="_blank"
+              <a 
+                href="https://x.com/zovushq" 
+                target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:text-gray-300 hover:bg-gray-300/20 hover:shadow-lg hover:shadow-gray-300/25 transition-all duration-300"
               >
                 <XIcon />
               </a>
-              <a
-                href="https://www.facebook.com/zovushq"
-                target="_blank"
+              <a 
+                href="https://www.facebook.com/zovushq" 
+                target="_blank" 
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:text-blue-600 hover:bg-blue-600/20 hover:shadow-lg hover:shadow-blue-600/25 transition-all duration-300"
               >
@@ -106,72 +106,66 @@ const Footer = () => {
               </a>
             </div>
           </div>
-
+          
           <div>
             <h4 className="font-semibold mb-4 relative inline-block after:content-[''] after:block after:w-full after:h-0.5 after:bg-white after:mt-1 after:rounded-full">
               Services
             </h4>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a
-                  href="https://bytesprout.zovus.tech"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="footer-underline text-white px-2 transition-colors font-normal"
-                  style={{ background: 'transparent' }}
+                <a 
+                  href="https://bytesprout.zovus.tech" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors font-normal"
                 >
                   ByteSprout
                 </a>
               </li>
               <li>
-                <button
-                  onClick={() => handleServiceNavigation('/ai-agent-development')}
-                  className="footer-underline text-white px-2 transition-colors text-left font-normal"
-                  style={{ background: 'transparent' }}
+                <button 
+                  onClick={() => handleServiceNavigation('/ai-agent-development')} 
+                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left font-normal"
                 >
                   AI Agent Development
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() => handleServiceNavigation('/ai-consultation')}
-                  className="footer-underline text-white px-2 transition-colors text-left font-normal"
-                  style={{ background: 'transparent' }}
+                <button 
+                  onClick={() => handleServiceNavigation('/ai-consultation')} 
+                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left font-normal"
                 >
                   AI Consultation
                 </button>
               </li>
             </ul>
           </div>
-
+          
           <div>
             <h4 className="font-semibold mb-4 relative inline-block after:content-[''] after:block after:w-full after:h-0.5 after:bg-white after:mt-1 after:rounded-full">
               Company
             </h4>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <button
-                  onClick={() => handleSmoothScroll('#about')}
-                  className="footer-underline text-white px-2 transition-colors text-left font-normal"
-                  style={{ background: 'transparent' }}
+                <button 
+                  onClick={() => handleSmoothScroll('#about')} 
+                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left font-normal"
                 >
                   About
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() => handleSmoothScroll('#contact')}
-                  className="footer-underline text-white px-2 transition-colors text-left font-normal"
-                  style={{ background: 'transparent' }}
+                <button 
+                  onClick={() => handleSmoothScroll('#contact')} 
+                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left font-normal"
                 >
                   Contact
                 </button>
               </li>
               <li>
-                <button
-                  onClick={() => handleSmoothScroll('#services')}
-                  className="footer-underline text-white px-2 transition-colors text-left font-normal"
-                  style={{ background: 'transparent' }}
+                <button 
+                  onClick={() => handleSmoothScroll('#services')} 
+                  className="text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#5433FF] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors text-left font-normal"
                 >
                   Services
                 </button>
@@ -179,7 +173,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-
+        
         <div className="border-t border-white/10 pt-8 text-center text-gray-400">
           <p>&copy; 2025 ZOVUS. All rights reserved. Built with purpose, powered by results.</p>
         </div>
