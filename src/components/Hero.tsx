@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Zap } from 'lucide-react';
@@ -14,10 +13,9 @@ const Hero = () => {
   return <section className="pt-24 pb-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Changed bg-[#FEEAED] (purple) to bg-[#E40223] (red) */}
-          <div className="inline-flex items-center px-4 py-2 bg-[#E40223] text-white rounded-full text-sm font-medium mb-8">
+          <div className="inline-flex items-center px-4 py-2 bg-[#FEEAED] text-[#E40223] rounded-full text-sm font-medium mb-8">
             <Zap className="w-4 h-4 mr-2" />
-            Start Your AI Journey
+            AI That Actually Works
           </div>
           
           <h1 className="md:text-6xl font-bold text-black mb-6 leading-tight text-5xl">

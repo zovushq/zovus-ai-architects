@@ -74,10 +74,8 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
         >
           Contact
         </button>
-        {/* Custom "Get Started" button styling for mobile: 
-            black bg/white text, red bg/white text on hover */}
         <Button 
-          className="bg-black text-white w-full mt-4 hover:bg-[#E40223] hover:text-white transition-colors"
+          className="bg-[#5433FF] hover:bg-[#4328CC] text-white w-full mt-4"
           onClick={handleGetStartedClick}
         >
           Get Started
@@ -88,3 +86,4 @@ const MobileMenu: React.FC<MobileMenuProps> = ({
 };
 
 export default MobileMenu;
+
