@@ -200,7 +200,11 @@ const AiConsultation = () => {
             <Button size="lg" variant="outline" onClick={handleContactClick}>
               Email Us
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[#E40223] hover:border-white" onClick={() => window.open('https://cal.com/zovus/bytesprout', '_blank')}>
+            <Button
+              size="lg"
+              variant="default"
+              onClick={() => window.open('https://cal.com/zovus/bytesprout', '_blank')}
+            >
               Book a Meeting
             </Button>
           </div>
