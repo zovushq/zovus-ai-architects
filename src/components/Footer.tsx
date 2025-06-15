@@ -54,7 +54,7 @@ const Footer = () => {
 
   // Reusable style for updated underline: #E40223 on hover
   const hoverUnderline =
-    "text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#E40223] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors font-normal";
+    "text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#E40223] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors font-normal";
 
   return (
     <footer className="bg-black/95 backdrop-blur-lg border-t border-white/10 text-white py-12">
@@ -121,7 +121,7 @@ const Footer = () => {
                   href="https://bytesprout.zovus.tech" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className={hoverUnderline}
+                  className={hoverUnderline + " active:text-white"}
                 >
                   ByteSprout
                 </a>
