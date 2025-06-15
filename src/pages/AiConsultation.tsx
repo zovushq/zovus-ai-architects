@@ -202,7 +202,7 @@ const AiConsultation = () => {
             </Button>
             <Button
               size="lg"
-              variant="default"
+              className="bg-white text-[#E40223] border border-[#E40223] hover:bg-black hover:text-white hover:border-black transition-colors"
               onClick={() => window.open('https://cal.com/zovus/bytesprout', '_blank')}
             >
               Book a Meeting
