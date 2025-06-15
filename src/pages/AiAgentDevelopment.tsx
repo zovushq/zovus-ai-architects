@@ -23,17 +23,17 @@ const AiAgentDevelopment = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-20 bg-gradient-to-br from-[#5433FF]/5 to-white">
+      <section className="pt-24 pb-20 bg-gradient-to-br from-[#FEEAED] to-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 bg-[#5433FF]/10 text-[#5433FF] rounded-full text-sm font-medium mb-8">
-              <Bot className="w-4 h-4 mr-2" />
+            <div className="inline-flex items-center px-4 py-2 bg-[#FEEAED] text-[#E40223] rounded-full text-sm font-medium mb-8">
+              <Bot className="w-4 h-4 mr-2 text-[#E40223]" />
               AI Agent Development
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold text-black mb-6 leading-tight">
               Automate Boring Tasks with{' '}
-              <span className="text-[#5433FF]">Custom AI Agents</span>
+              <span className="text-[#E40223]">Custom AI Agents</span>
             </h1>
             
             <p className="text-xl text-gray-800 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -43,7 +43,7 @@ const AiAgentDevelopment = () => {
             
             <Button 
               size="lg" 
-              className="bg-[#5433FF] hover:bg-[#4328CC] text-white px-8 py-4 text-lg"
+              className="bg-black text-white px-8 py-4 text-lg hover:bg-[#E40223] hover:text-white transition-colors"
               onClick={handleContactClick}
             >
               Start Building AI Agents
@@ -66,8 +66,8 @@ const AiAgentDevelopment = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6">
-              <div className="w-16 h-16 bg-[#5433FF]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <DollarSign className="w-8 h-8 text-[#5433FF]" />
+              <div className="w-16 h-16 bg-[#FEEAED] rounded-full flex items-center justify-center mx-auto mb-4">
+                <DollarSign className="w-8 h-8 text-[#E40223]" />
               </div>
               <h3 className="text-xl font-bold text-black mb-3">90% Cost Reduction</h3>
               <p className="text-gray-800">
@@ -76,8 +76,8 @@ const AiAgentDevelopment = () => {
             </div>
             
             <div className="text-center p-6">
-              <div className="w-16 h-16 bg-[#5433FF]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="w-8 h-8 text-[#5433FF]" />
+              <div className="w-16 h-16 bg-[#FEEAED] rounded-full flex items-center justify-center mx-auto mb-4">
+                <Clock className="w-8 h-8 text-[#E40223]" />
               </div>
               <h3 className="text-xl font-bold text-black mb-3">24/7 Operations</h3>
               <p className="text-gray-800">
@@ -86,8 +86,8 @@ const AiAgentDevelopment = () => {
             </div>
             
             <div className="text-center p-6">
-              <div className="w-16 h-16 bg-[#5433FF]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <TrendingUp className="w-8 h-8 text-[#5433FF]" />
+              <div className="w-16 h-16 bg-[#FEEAED] rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="w-8 h-8 text-[#E40223]" />
               </div>
               <h3 className="text-xl font-bold text-black mb-3">Instant Scalability</h3>
               <p className="text-gray-800">
@@ -99,7 +99,7 @@ const AiAgentDevelopment = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-[#f9f8fe]">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-black mb-4">
@@ -115,15 +115,15 @@ const AiAgentDevelopment = () => {
               <h3 className="text-2xl font-bold text-black mb-4">Custom AI Agent Development</h3>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-[#5433FF] mr-3 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#E40223] mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-800">Tailored solutions for your specific workflows</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-[#5433FF] mr-3 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#E40223] mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-800">Integration with existing systems and tools</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-[#5433FF] mr-3 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#E40223] mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-800">Continuous learning and improvement</span>
                 </li>
               </ul>
@@ -133,15 +133,15 @@ const AiAgentDevelopment = () => {
               <h3 className="text-2xl font-bold text-black mb-4">Process Automation</h3>
               <ul className="space-y-3 mb-6">
                 <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-[#5433FF] mr-3 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#E40223] mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-800">Data entry and processing automation</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-[#5433FF] mr-3 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#E40223] mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-800">Customer service and support automation</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-[#5433FF] mr-3 mt-0.5 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-[#E40223] mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-800">Report generation and analysis</span>
                 </li>
               </ul>
@@ -151,7 +151,7 @@ const AiAgentDevelopment = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-[#5433FF]">
+      <section className="py-20 bg-[#E40223]">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Automate Your Business?
@@ -162,14 +162,14 @@ const AiAgentDevelopment = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               size="lg" 
-              className="bg-white text-[#5433FF] hover:bg-gray-100 px-8 py-4 text-lg"
+              className="bg-black text-white px-8 py-4 text-lg hover:bg-[#E40223] hover:text-white transition-colors"
               onClick={handleContactClick}
             >
               Email Us
             </Button>
             <Button 
               size="lg" 
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#5433FF] px-8 py-4 text-lg"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#E40223] px-8 py-4 text-lg transition-colors"
               onClick={() => window.open('https://cal.com/zovus/bytesprout', '_blank')}
             >
               Book a Meeting
