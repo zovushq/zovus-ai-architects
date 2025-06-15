@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -10,7 +9,7 @@ const Contact = () => {
   const handleBookCallClick = () => {
     window.open('https://cal.com/zovus/bytesprout', '_blank');
   };
-  return <section id="contact" className="py-20 bg-white">
+  return <section id="contact" className="bg-white py-[60px]">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-black mb-4">
@@ -34,11 +33,9 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-black">Email</h4>
-                      <a
-                        href="mailto:zovus.inc@gmail.com"
-                        className="text-gray-800 transition-all duration-300 relative after:content-[''] after:absolute after:left-0 after:w-full after:h-[1.2px] after:bg-gray-500 after:bottom-[-4px] after:scale-x-0 hover:after:scale-x-100 after:origin-bottom-left after:transition-transform after:duration-300 after:rounded-full hover:after:bg-[#E40223] focus:after:bg-[#E40223]"
-                        style={{ WebkitTapHighlightColor: "transparent" }}
-                      >
+                      <a href="mailto:zovus.inc@gmail.com" className="text-gray-800 transition-all duration-300 relative after:content-[''] after:absolute after:left-0 after:w-full after:h-[1.2px] after:bg-gray-500 after:bottom-[-4px] after:scale-x-0 hover:after:scale-x-100 after:origin-bottom-left after:transition-transform after:duration-300 after:rounded-full hover:after:bg-[#E40223] focus:after:bg-[#E40223]" style={{
+                      WebkitTapHighlightColor: "transparent"
+                    }}>
                         zovus.inc@gmail.com
                       </a>
                     </div>
@@ -87,21 +84,12 @@ const Contact = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               {/* book a call: black bg, white text */}
-              <Button 
-                size="lg" 
-                onClick={handleBookCallClick} 
-                className="flex-1 bg-black text-white hover:bg-[#E40223] hover:text-white px-0 py-[10px] border-none"
-              >
+              <Button size="lg" onClick={handleBookCallClick} className="flex-1 bg-black text-white hover:bg-[#E40223] hover:text-white px-0 py-[10px] border-none">
                 Book a Call
                 <Calendar className="w-5 h-5 ml-2" />
               </Button>
               {/* send email: black outline, black text normal, red bg/white hover */}
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={handleEmailClick}
-                className="flex-1 border-2 border-black text-black bg-white hover:bg-[#E40223] hover:text-white hover:border-[#E40223] py-[10px]"
-              >
+              <Button size="lg" variant="outline" onClick={handleEmailClick} className="flex-1 border-2 border-black text-black bg-white hover:bg-[#E40223] hover:text-white hover:border-[#E40223] py-[10px]">
                 Send Email
                 <Mail className="w-5 h-5 ml-2" />
               </Button>
