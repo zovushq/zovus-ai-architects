@@ -1,9 +1,10 @@
 import React from 'react';
 import { Instagram, Linkedin, Facebook } from 'lucide-react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
 
 const Footer = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleSmoothScroll = (elementId: string) => {
     // Check if we're on the home page
@@ -52,9 +53,17 @@ const Footer = () => {
     </svg>
   );
 
-  // Reusable style for updated underline: #E40223 on hover
+  // Updated hover underline with active state support
   const hoverUnderline =
-    "text-white hover:text-white active:text-[#5433FF] relative inline-block after:content-[''] after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#E40223] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors font-normal";
+    "text-white hover:text-white relative inline-block after:content-[''] after:w-full after:scale-x-0 after:h-0.5 after:bottom-0 after:left-0 after:bg-[#E40223] after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left transition-colors font-normal";
+
+  // Active state styling for footer menu items
+  const getActiveStateClass = (path?: string) => {
+    if (path && location.pathname === path) {
+      return "text-white";
+    }
+    return "text-gray-400 hover:text-white active:text-white";
+  };
 
   return (
     <footer className="bg-black/95 backdrop-blur-lg border-t border-white/10 text-white py-12">
@@ -115,13 +124,13 @@ const Footer = () => {
             <h4 className="font-semibold mb-4 relative inline-block after:content-[''] after:block after:w-full after:h-0.5 after:bg-white after:mt-1 after:rounded-full">
               Services
             </h4>
-            <ul className="space-y-2 text-gray-400">
+            <ul className="space-y-2">
               <li>
                 <a 
                   href="https://bytesprout.zovus.tech" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className={hoverUnderline + " active:text-white"}
+                  className={`${hoverUnderline} ${getActiveStateClass()}`}
                 >
                   ByteSprout
                 </a>
@@ -129,7 +138,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleServiceNavigation('/ai-agent-development')} 
-                  className={hoverUnderline + " text-left"}
+                  className={`${hoverUnderline} ${getActiveStateClass('/ai-agent-development')} text-left`}
                 >
                   AI Agent Development
                 </button>
@@ -137,7 +146,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleServiceNavigation('/ai-consultation')} 
-                  className={hoverUnderline + " text-left"}
+                  className={`${hoverUnderline} ${getActiveStateClass('/ai-consultation')} text-left`}
                 >
                   AI Consultation
                 </button>
@@ -149,11 +158,11 @@ const Footer = () => {
             <h4 className="font-semibold mb-4 relative inline-block after:content-[''] after:block after:w-full after:h-0.5 after:bg-white after:mt-1 after:rounded-full">
               Company
             </h4>
-            <ul className="space-y-2 text-gray-400">
+            <ul className="space-y-2">
               <li>
                 <button 
                   onClick={() => handleSmoothScroll('#about')} 
-                  className={hoverUnderline + " text-left"}
+                  className={`${hoverUnderline} ${getActiveStateClass('/')} text-left`}
                 >
                   About
                 </button>
@@ -161,7 +170,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleSmoothScroll('#contact')} 
-                  className={hoverUnderline + " text-left"}
+                  className={`${hoverUnderline} ${getActiveStateClass('/')} text-left`}
                 >
                   Contact
                 </button>
@@ -169,7 +178,7 @@ const Footer = () => {
               <li>
                 <button 
                   onClick={() => handleSmoothScroll('#services')} 
-                  className={hoverUnderline + " text-left"}
+                  className={`${hoverUnderline} ${getActiveStateClass('/')} text-left`}
                 >
                   Services
                 </button>

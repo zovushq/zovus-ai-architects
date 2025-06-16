@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Bot, Target, Clock, DollarSign, TrendingUp, CheckCircle } from 'lucide-react';
+
 const AiAgentDevelopment = () => {
   useEffect(() => {
     document.title = 'Custom AI Agent Development | Build Smart Automation with ZOVUS';
@@ -14,7 +15,8 @@ const AiAgentDevelopment = () => {
   const handleContactClick = () => {
     window.location.href = 'mailto:zovus.inc@gmail.com';
   };
-  return <div className="min-h-screen bg-white">
+  return (
+    <div className="min-h-screen bg-white">
       <Header />
       
       {/* Hero Section */}
@@ -151,10 +153,10 @@ const AiAgentDevelopment = () => {
             Let's discuss how custom AI agents can transform your operations and reduce costs significantly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="border-2 border-white text-white bg-transparent px-8 py-4 text-lg hover:bg-white hover:text-[#E40223] transition-colors" onClick={handleContactClick}>
+            <Button className="border-2 border-white text-white bg-transparent px-6 py-2 text-base hover:bg-white hover:text-[#E40223] transition-colors" onClick={handleContactClick}>
               Email Us
             </Button>
-            <Button size="lg" className="bg-white text-[#E40223] border-2 border-white px-8 py-4 text-lg hover:bg-black hover:text-white transition-colors" onClick={() => window.open('https://cal.com/zovus/bytesprout', '_blank')}>
+            <Button className="bg-white text-[#E40223] border-2 border-white px-6 py-2 text-base hover:bg-black hover:text-white transition-colors" onClick={() => window.open('https://cal.com/zovus/bytesprout', '_blank')}>
               Book a Meeting
             </Button>
           </div>
@@ -162,6 +164,8 @@ const AiAgentDevelopment = () => {
       </section>
 
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default AiAgentDevelopment;
