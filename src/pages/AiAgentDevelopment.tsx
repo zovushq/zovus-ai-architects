@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -13,11 +12,9 @@ const AiAgentDevelopment = () => {
       metaDescription.setAttribute('content', 'ZOVUS builds AI agents tailored to your business—handling lead gen, support, operations, and more. Automate intelligently and boost efficiency without complexity.');
     }
   }, []);
-  
   const handleContactClick = () => {
-    window.location.href = 'mailto:hello@zovus.tech';
+    window.location.href = 'mailto:zovus.inc@gmail.com';
   };
-  
   return (
     <div className="min-h-screen bg-white">
       <Header />
