@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Zap } from 'lucide-react';
+
 const Hero = () => {
   const handleSmoothScroll = (elementId: string) => {
     const element = document.querySelector(elementId);
@@ -10,7 +12,9 @@ const Hero = () => {
       });
     }
   };
-  return <section className="pt-24 pb-20 bg-white">
+
+  return (
+    <section className="pt-24 pb-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center px-4 py-2 bg-[#FEEAED] text-[#E40223] rounded-full text-sm font-medium mb-8">
@@ -29,13 +33,17 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" onClick={() => handleSmoothScroll('#services')}>
+            <Button 
+              size="lg" 
+              className="bg-[#E40223] text-white hover:bg-[#B30225] border-none"
+              onClick={() => handleSmoothScroll('#services')}
+            >
               Scale Your Business
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
           </div>
           
-          <div className="mt-16 rounded-2xl p-8 shadow-lg border border-gray-200 bg-[F9FAFB] bg-gray-50">
+          <div className="mt-16 rounded-2xl p-8 shadow-lg border border-gray-200 bg-gray-50">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="text-3xl font-bold text-[#E40223] mb-2">10x</div>
@@ -53,6 +61,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;

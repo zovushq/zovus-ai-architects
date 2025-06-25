@@ -16,10 +16,18 @@ const CTASection: React.FC<CTASectionProps> = ({ onContact }) => (
         Let's create a strategic AI roadmap that transforms your business operations and drives measurable growth.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <Button size="lg" variant="outline" onClick={onContact}>
+        <Button 
+          size="lg" 
+          className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-[#E40223] transition-colors"
+          onClick={onContact}
+        >
           Email Us
         </Button>
-        <Button size="lg" className="bg-white text-[#E40223] border border-[#E40223] hover:bg-black hover:text-white hover:border-black transition-colors" onClick={() => window.open('https://cal.com/zovus/bytesprout', '_blank')}>
+        <Button 
+          size="lg" 
+          className="bg-white text-[#E40223] border-2 border-white hover:bg-black hover:text-white hover:border-black transition-colors" 
+          onClick={() => window.open('https://cal.com/zovus/bytesprout', '_blank')}
+        >
           Book a Meeting
         </Button>
       </div>

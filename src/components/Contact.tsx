@@ -105,7 +105,7 @@ const Contact = () => {
                 
                 <Button 
                   type="submit" 
-                  className="w-full"
+                  className="w-full bg-[#E40223] text-white hover:bg-[#B30225] border-none"
                   onClick={() => window.location.href = 'mailto:hello@zovus.tech'}
                 >
                   Send Email
