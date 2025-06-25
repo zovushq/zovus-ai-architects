@@ -1,11 +1,13 @@
+
 import React from "react";
 import { Button } from "@/components/ui/button";
+
 type CTASectionProps = {
   onContact: () => void;
 };
-const CTASection: React.FC<CTASectionProps> = ({
-  onContact
-}) => <section className="py-20 bg-[#e40223]">
+
+const CTASection: React.FC<CTASectionProps> = ({ onContact }) => (
+  <section className="py-20 bg-[#e40223]">
     <div className="container mx-auto px-6 text-center">
       <h2 className="text-4xl font-bold text-white mb-6">
         Ready to Scale With AI?
@@ -22,5 +24,7 @@ const CTASection: React.FC<CTASectionProps> = ({
         </Button>
       </div>
     </div>
-  </section>;
+  </section>
+);
+
 export default CTASection;

@@ -1,102 +1,122 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Mail, Phone, MapPin, Clock, Calendar } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
+
 const Contact = () => {
-  const handleEmailClick = () => {
-    window.location.href = 'mailto:zovus.inc@gmail.com';
-  };
-  const handleBookCallClick = () => {
-    window.open('https://cal.com/zovus/bytesprout', '_blank');
-  };
-  return <section id="contact" className="bg-white py-[60px]">
+  return (
+    <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-black mb-4">
-            Ready to Scale With AI?
-          </h2>
-          <p className="text-xl text-gray-800 max-w-3xl mx-auto">
-            Let's discuss how we can help transform your business with practical AI solutions that deliver real results.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          <div>
-            <h3 className="text-2xl font-bold text-black mb-6">Get in Touch</h3>
-            <div className="space-y-6">
-              <Card className="border border-gray-200 shadow-sm">
-                <CardContent className="p-6">
-                  <div className="flex items-center">
-                    {/* ICON: email, color #E40223, bg-light red */}
-                    <div className="w-12 h-12 bg-[#E40223]/10 rounded-full flex items-center justify-center mr-4">
-                      <Mail className="w-6 h-6 text-[#E40223]" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-black">Email</h4>
-                      <a href="mailto:zovus.inc@gmail.com" className="text-gray-800 transition-all duration-300 relative after:content-[''] after:absolute after:left-0 after:w-full after:h-[1.2px] after:bg-gray-500 after:bottom-[-4px] after:scale-x-0 hover:after:scale-x-100 after:origin-bottom-left after:transition-transform after:duration-300 after:rounded-full hover:after:bg-[#E40223] focus:after:bg-[#E40223]" style={{
-                      WebkitTapHighlightColor: "transparent"
-                    }}>
-                        zovus.inc@gmail.com
-                      </a>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="border border-gray-200 shadow-sm">
-                <CardContent className="p-6">
-                  <div className="flex items-center">
-                    {/* ICON: response time, color #E40223, bg-light red */}
-                    <div className="w-12 h-12 bg-[#E40223]/10 rounded-full flex items-center justify-center mr-4">
-                      <Clock className="w-6 h-6 text-[#E40223]" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-black">Response Time</h4>
-                      <p className="text-gray-800">Within 24 hours</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-black mb-4">
+              Start Your AI Journey
+            </h2>
+            <p className="text-xl text-gray-800 max-w-2xl mx-auto">
+              Ready to transform your business with AI? Let's discuss how we can help you scale efficiently and profitably.
+            </p>
           </div>
           
-          <div className="bg-[#F9FAFB] p-8 rounded-2xl border border-gray-200">
-            <h3 className="text-2xl font-bold text-black mb-6">Start Your AI Journey</h3>
-            <p className="text-gray-800 mb-8 leading-relaxed">
-              Ready to automate your processes, reduce costs, and scale your business? 
-              Let's explore how our AI solutions can transform your operations.
-            </p>
-            
-            <div className="space-y-4">
-              <div className="flex items-center text-gray-800">
-                <div className="w-2 h-2 bg-[#E40223] rounded-full mr-3"></div>
-                Free consultation call
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="space-y-8">
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-[#FEEAED] rounded-full flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-6 h-6 text-[#E40223]" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-black mb-2">Email Us</h3>
+                  <p className="text-gray-800 mb-3">
+                    Get in touch for a consultation or quote
+                  </p>
+                  <a href="mailto:hello@zovus.tech" className="text-[#E40223] hover:underline">
+                    hello@zovus.tech
+                  </a>
+                </div>
               </div>
-              <div className="flex items-center text-gray-800">
-                <div className="w-2 h-2 bg-[#E40223] rounded-full mr-3"></div>
-                Custom solution proposal
+              
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-[#FEEAED] rounded-full flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-6 h-6 text-[#E40223]" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-black mb-2">Call Us</h3>
+                  <p className="text-gray-800 mb-3">
+                    Speak directly with our AI consultants
+                  </p>
+                  <a href="tel:+1234567890" className="text-[#E40223] hover:underline">
+                    +1 (234) 567-8900
+                  </a>
+                </div>
               </div>
-              <div className="flex items-center text-gray-800">
-                <div className="w-2 h-2 bg-[#E40223] rounded-full mr-3"></div>
-                Implementation roadmap
+              
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-[#FEEAED] rounded-full flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-6 h-6 text-[#E40223]" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-black mb-2">Visit Us</h3>
+                  <p className="text-gray-800">
+                    123 AI Innovation Drive<br />
+                    Tech Valley, CA 94000<br />
+                    United States
+                  </p>
+                </div>
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              {/* book a call: black bg, white text */}
-              <Button size="lg" onClick={handleBookCallClick} className="flex-1 bg-black text-white hover:bg-[#E40223] hover:text-white px-0 py-[10px] border-none">
-                Book a Call
-                <Calendar className="w-5 h-5 ml-2" />
-              </Button>
-              {/* send email: black outline, black text normal, red bg/white hover */}
-              <Button size="lg" variant="outline" onClick={handleEmailClick} className="flex-1 border-2 border-black text-black bg-white hover:bg-[#E40223] hover:text-white hover:border-[#E40223] py-[10px]">
-                Send Email
-                <Mail className="w-5 h-5 ml-2" />
-              </Button>
+            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+              <h3 className="text-2xl font-bold text-black mb-6">Send us a message</h3>
+              <form className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#E40223] focus:border-transparent"
+                    placeholder="Your name"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#E40223] focus:border-transparent"
+                    placeholder="your@email.com"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    rows={4}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#E40223] focus:border-transparent"
+                    placeholder="Tell us about your project..."
+                  ></textarea>
+                </div>
+                
+                <Button 
+                  type="submit" 
+                  className="w-full"
+                  onClick={() => window.location.href = 'mailto:hello@zovus.tech'}
+                >
+                  Send Email
+                </Button>
+              </form>
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Contact;
