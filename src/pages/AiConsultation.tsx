@@ -1,4 +1,5 @@
 
+
 import React, { useEffect } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -20,7 +21,7 @@ const AiConsultation = () => {
   }, []);
 
   const handleContactClick = () => {
-    window.location.href = "mailto:zovus.inc@gmail.com";
+    window.location.href = "mailto:hello@zovus.tech";
   };
 
   return (
@@ -36,3 +37,4 @@ const AiConsultation = () => {
 };
 
 export default AiConsultation;
+

@@ -13,7 +13,7 @@ const AiAgentDevelopment = () => {
     }
   }, []);
   const handleContactClick = () => {
-    window.location.href = 'mailto:zovus.inc@gmail.com';
+    window.location.href = 'mailto:hello@zovus.tech';
   };
   return (
     <div className="min-h-screen bg-white">
